@@ -1,0 +1,1388 @@
+@font-face {
+    font-family: "Myriad Pro Regular";
+    src: url("fonts/MyriadPro/MyriadProRegular.ttf")
+}
+
+@font-face {
+    font-family: "Myriad Pro Senibold";
+    src: url("fonts/MyriadPro/MyriadProSemibold.ttf")
+}
+
+@font-face {
+    font-family: "Myraid Pro Light";
+    src: url("fonts/MyriadPro/MyriadPro-Light.woff")
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    background: #fff;
+    background: linear-gradient(to bottom, #dedede, 5%, #fff);
+    border-top: 3px solid #3a6a8d;
+}
+
+button:focus {
+    outline: none;
+}
+/* НАЧАЛО header */
+header {
+    height: 140px;
+}
+
+.container {
+    width: 738px;
+    margin: auto;
+    position: relative;
+}
+
+header .container {
+    margin-top: 25px;
+}
+header .container h1 {
+    position: absolute;
+}
+
+header .container h1 {
+    top: 10px;
+    left: 64px;
+    color: #171d23;
+    font-family: "Myriad Pro Senibold";
+}
+
+header .container h1 span {
+    color: #4b89ae;
+}
+
+header .container p {
+    position: absolute;
+    top: 25px;
+    left: 310px;
+    color: #9a9a9a;
+    font-family: "Myriad Pro Regular";
+}
+
+header .container .rss {
+    float: right;
+    margin-right: 17px;
+    margin-top: 27px;
+    background: url('/img/RSS.png') no-repeat top right;
+    padding-right: 25px;
+    color: #868686;
+    font-family: Arial;
+}
+
+nav ul{
+    margin-top: 10px;
+    display: table;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    border-color: #e0e0e0;
+    background: linear-gradient(#fff, #ececec);
+}
+
+nav ul li {
+    text-align: center;
+    display: table-cell;
+    list-style-type: none;
+    padding: 10px 0;
+    height: 50px;
+}
+
+nav ul li a {
+    border-right: 1px dotted #e0e0e0;
+    display: inline-block;
+    width: 100%;
+    padding: 5px 15px;
+    color: #919191;
+    font-family: Georgia;
+    text-decoration: none;
+}
+
+a.last {
+    border-right: none;
+}
+
+nav ul li a.active-page {
+    color: #000000;
+    text-decoration: underline;
+}
+
+nav ul li a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+/* КОНЕЦ header */
+
+
+/* НАЧАЛО .delivering */
+.delivering .container {
+    height: 311px;
+    background: #3a6a8d;
+    border: 1px solid #3a6a8d;
+    border-radius: 5px;
+    background-image: url('img/delivering-bg.png');
+}
+
+.delivering .del-content {
+    width: 265px;
+    height: 100%;
+    float: right;
+    margin-right: 64px;
+    color: #fbfbfb;
+    position: relative;
+}
+
+.delivering .del-content h1 {
+    font-family: "Myriad Pro Senibold";
+    font-size: 4em;
+    letter-spacing: -3px;
+    margin-top: 35px;
+}
+
+.delivering .del-content h3 {
+    font-family: "Myriad Pro Senibold";
+    font-size: 1.5em;
+    letter-spacing: -1px;
+}
+
+.delivering .del-content p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .7em;
+    line-height: 1.6em;
+}
+
+.delivering .del-content button {
+    position: absolute;
+    bottom: 33px;
+    right: 0px;
+    width: 97px;
+    height: 28px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-image: url('img/button-bg.png');
+}
+
+.delivering .del-content button:hover {
+    cursor: pointer;
+    background: rgb(241, 241, 241);
+}
+/* КОНЕЦ .delivering */
+
+
+/* НАЧАЛО .banners */
+.banners .container {
+    display: flex;
+    gap: 7px;
+    height: 206px;
+    align-items: stretch;
+}
+
+.banners .container .col {
+    margin-top: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    /* padding: 20px 15px; */
+    /* text-align: center; */
+}
+
+.banners .container .col .banner-heading {
+    margin: auto;
+    width: 98%;
+    height: 50px;
+    border-bottom: 1px dotted #dadada;
+}
+
+.banners .container .col h3 {
+    font-family: "Myriad Pro Regular";
+    font-size: 1.2em;
+    padding-left: 15px;
+    padding-top: 15px;
+    letter-spacing: -.8px;
+}
+
+.banners .container .col1 h3 {
+    color: #60afd7;
+    position: relative;
+}
+
+.banners .container .col1 h3::after {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 45px;
+    background-image: url('img/baner-head-img-1.png');
+    top: 5px;
+    right: 5px;
+}
+
+.banners .container .col2 h3 {
+    color: #f4bf1a;
+    position: relative;
+}
+
+.banners .container .col2 h3::after {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 45px;
+    background-image: url('img/baner-head-img-2.png');
+    top: 5px;
+    right: 5px;
+}
+
+.banners .container .col3 h3 {
+    color: #5bae3c;
+    position: relative;
+}
+
+.banners .container .col3 h3::after {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 45px;
+    background-image: url('img/baner-head-img-3.png');
+    top: 5px;
+    right: 5px;
+}
+
+.banners .container .col .banner-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    font-family: Georgia;
+    font-size: .8em;
+    line-height: 1.4em;
+}
+
+.banners .container .col .banner-content p {
+    color: #868686;
+}
+
+.banners .container .col button {
+    width: 70px;
+    height: 21px;
+    border: transparent;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #294c6f, 40%, #6fcfff);
+    color: #fff;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.banners .container .col button:hover {
+    cursor: pointer;
+    background: #5caed8;
+}
+/* КОНЕЦ .banners */
+
+
+/* НАЧАЛО .two-bars */
+.two-bars {
+    height: 271px;
+}
+.two-bars .container {
+    margin-top: 20px;
+    display: flex;
+    width: 738px;
+    height: 242px;
+}
+
+.two-bars .container .titles {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-family: serif;
+    font-family: "Myraid Pro Light";
+    font-size: 1.8em;
+}
+
+.two-bars .container .main {
+    flex-basis: 67%;
+    border-right: 1px dotted #aaaaaa;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+.two-bars .container .main .subtitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3d6f92;
+    font-size: .8em;
+    margin-bottom: 19px;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+.two-bars .container .main .main-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .8em;
+    line-height: 1.4em;
+    color: #868686;
+}
+
+.two-bars .container .more {
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+    color: #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    letter-spacing: 0px;
+    background-image: url("img/right-arrow.png");
+    background-repeat: no-repeat;
+    background-position: top 8px right 0;
+    padding-right: 13px;
+}
+
+.two-bars .container .sidebar {
+    flex-basis: 33%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.two-bars .container .sidebar .event {
+    margin-bottom: 23px;
+}
+
+.two-bars .container .sidebar .event-date {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .9em;
+    color: #444444;
+    padding-left: 22px;
+    padding-top: 2px;
+    background: url("img/paper-list.png") no-repeat;
+    background-position-y: 4px;
+    line-height: 1.4em;
+    margin-bottom: 3px;
+}
+
+.two-bars .container .sidebar .event a {
+    font-family: "Georegia";
+    color: #3d6f92;
+}
+
+.two-bars .container .sidebar p {
+    font-family: "Georegia";
+    font-size: .8em;
+    line-height: 1.4em;
+    color: #868686;
+}
+/* КОНЕЦ .two-bars */
+
+
+/* НАЧАЛО footer */
+footer {
+    height: 61px;
+    border-top: 3px solid #3a6a8d;
+    background: linear-gradient(to bottom, #e2e2e2, 30%, #fff);
+}
+
+footer .container {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #868686;
+    font-size: 0.9em;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+footer .container a {
+    color: #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+/* КОНЕЦ footer */
+
+
+/* =============== */
+/*=== SOLUTIONS ===*/
+/* =============== */
+.solutions-main-content .subtitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3d6f92;
+    font-size: .8em;
+    margin-bottom: 3px;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+.solutions-main-content h2.titles {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-family: serif;
+    font-family: "Myraid Pro Light";
+    font-size: 1.8em;
+}
+
+.solutions-main-content p.main-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .7em;
+    line-height: 1.5em;
+    color: #868686;
+}
+
+a.more {
+    position: absolute;
+    color: #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    letter-spacing: 0px;
+    background-image: url("img/right-arrow.png");
+    background-repeat: no-repeat;
+    background-position: top 8px right 0;
+    padding-right: 13px;
+}
+/* НАЧАЛО .solutions-main-content */
+
+.solutions-main-content .container {
+    display: flex;
+    margin-top: 17px;
+    margin-bottom: 20px;
+}
+
+.solutions-main-content .container .main {
+    flex-basis: 67%;
+    padding: 0 24px 0 15px;
+    
+}
+
+.solutions-main-content .container .main .about {
+    height: 135px;
+    position: relative;
+    border-bottom: 1px dotted #ccc;
+}
+
+.solutions-main-content .container .main .about .more {
+    bottom: 29px;
+    right: 0px;
+}
+
+.solutions-main-content .container .main .showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px 3em;
+    height: 310px;
+    padding-top: 20px;
+}
+
+.solutions-main-content .container .main .showcase div {
+    position: relative;
+    height: 100px;
+    /* padding-left: 16px; */
+}
+
+.solutions-main-content .container .main .showcase .more {
+    bottom: 11px;
+    right: 0;
+    font-size: .9em;
+}
+
+.solutions-main-content .container .main .showcase .showcase-header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.solutions-main-content .container .sidebar {
+    flex-basis: 33%;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    height: 457px;
+    position: relative;
+}
+
+.solutions-main-content .container .sidebar .header {
+    height: 47px;
+    width: 235px;
+    margin: auto;
+    border-bottom: 1px dotted #dadada;
+    padding-top: 15px;
+    padding-left: 13px;
+}
+
+.solutions-main-content .container .sidebar .header h2 {
+    font-family: "Myraid Pro Light";
+    color: #5bae3c;
+    font-size: 1.4em;
+    letter-spacing: -1px;
+    position: relative;
+}
+
+.solutions-main-content .container .sidebar .header h2::after {
+    position: absolute;
+    content: "";
+    width: 54px;
+    height: 45px;
+    background: url("img/customers-solutions.png");
+    top: -12px;
+    right: 0px;
+}
+
+.solutions-main-content .container .sidebar .sidebar-main {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.solutions-main-content .container .sidebar h5 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 13px;
+    /* margin-bottom: 15px; */
+}
+
+.solutions-main-content .container .sidebar p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .7em;
+    line-height: 1.5em;
+    color: #868686;
+}
+
+.solutions-main-content .container .sidebar .sidebar-image {
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.solutions-main-content .container .sidebar .sidebar-links {
+    margin: 20px 0;
+}
+
+.solutions-main-content .container .sidebar .sidebar-links a {
+    display: block;
+    position: relative;
+    color: #3d6f92;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    line-height: 1.6em;
+    letter-spacing: 1px;
+    padding-left: 8px;
+}
+
+.solutions-main-content .container .sidebar .sidebar-links a::before {
+    position: absolute;
+    content: "-";
+    font-weight: bolder;
+    left: 0;
+}
+
+.solutions-main-content .container .sidebar a.button {
+    display: block;
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+    width: 71px;
+    height: 22px;
+    color: #fff;
+    font-size: 0.8em;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #294c6f, 40%,  #4db6e9);
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-left: 8px;
+}
+
+.solutions-main-content .container .sidebar a.button:hover{
+    background: #5caed8;
+}
+/* КОНЕЦ .solutions-main-content */
+
+
+/* =============== */
+/*=== PRODUCTS ===*/
+/* =============== */
+
+
+/* НАЧАЛО .products-main-content  */
+
+.products-main-content .container {
+    margin-top: 17px;
+}
+
+.products-main-content .links a {
+    display: block;
+    position: relative;
+    color: #3d6f92;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 8px;
+    font-size: .7em;
+    line-height: 1.7em;
+    letter-spacing: 1px;
+}
+
+.products-main-content .links a::before {
+    position: absolute;
+    content: "-";
+    font-weight: bolder;
+    left: 0;
+}
+
+/* == .FIRST ROW == */
+
+.products-main-content .first-row {
+    display: flex;
+    gap: 7px;
+    height: 185px;
+    position: relative;
+}
+
+.products-main-content .first-row a.button {
+    display: block;
+    position: absolute;
+    right: 16px;
+    bottom: 11px;
+    width: 71px;
+    height: 22px;
+    color: #fff;
+    font-size: 0.8em;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #294c6f, 40%,  #4db6e9);
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-left: 8px;
+}
+
+.products-main-content .first-row a.button:hover{
+    background: #5caed8;
+}
+
+.products-main-content .first-row .header h2 {
+    font-family: "Myraid Pro Light";
+    font-size: 1.2em;
+}
+
+.products-main-content .first-row p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .7em;
+    line-height: 1.5em;
+    color: #868686;
+}
+
+.products-main-content .first-row .featured-product {
+    flex-basis: 490px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    position: relative;
+}
+
+.products-main-content .first-row .featured-product .header {
+    height: 48px;
+    border-bottom: 1px dotted #dadada;
+    width: 484px;
+    margin: auto;
+    padding-left: 17px;
+    padding-top: 16px;
+    color: #60afd7;
+    background: url("img/featured-product.png") top 2px right 13px no-repeat;
+}
+
+.products-main-content .first-row .featured-product .main {
+    padding-top: 10px;
+    padding-left: 16px;
+}
+
+.products-main-content .first-row .featured-product .main p {
+    padding-top: 3px;
+}
+
+.products-main-content .first-row .integration {
+    flex-basis: 241px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    position: relative;
+}
+
+.products-main-content .first-row .integration .header {
+    width: 237px;
+    margin: auto;
+    border-bottom: 1px dotted #dadada;
+    height: 48px;
+    padding-left: 17px;
+    padding-top: 16px;
+    color: #5bae3c;
+    background: url("img/integration.png") top 3px right 16px no-repeat;
+}
+
+.products-main-content .first-row .integration .main {
+    padding: 10px 16px 0 16px;
+}
+
+.products-main-content .first-row .integration .main p {
+    padding-top: 3px;
+}
+
+
+/* == .SECOND ROW == */
+
+.products-main-content .second-row {
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 23px;
+}
+
+.products-main-content .second-row h2.titles {
+    margin-top: 11px;
+    margin-bottom: 9px;
+    font-family: serif;
+    font-family: "Myraid Pro Light";
+    font-size: 1.8em;
+}
+
+.products-main-content .second-row .subtitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3d6f92;
+    font-size: .8em;
+    margin-bottom: 3px;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+.products-main-content .second-row p.main-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .7em;
+    line-height: 1.5em;
+    color: #868686;
+}
+
+.products-main-content .second-row .more {
+    bottom: 0;
+    right: 17px;
+}
+
+.products-main-content .second-row .new-tech {
+    flex-basis: 492px;
+    height: 250px;
+    padding-left: 1em;
+    padding-right: 20px;
+    position: relative;
+}
+
+.products-main-content .second-row .new-tech .image {
+    float: left;
+}
+
+.products-main-content .second-row .new-tech .subtitle {
+    padding-left: 167px;
+    margin-bottom: 13px;
+}
+
+.products-main-content .second-row .new-tech .subtitle + p {
+    padding-left: 167px;
+    line-height: 17px;
+}
+
+.products-main-content .second-row .new-tech h5 {
+    clear: left;
+    margin-top: 14px;
+}
+
+.products-main-content .second-row .products-list {
+    flex-basis: 246px;
+    height: 250px;
+    border-left: 1px dotted #dadada;
+    padding-left: 20px;
+    position: relative;
+}
+
+.products-main-content .second-row .products-list .links a {
+    line-height: 17px;
+}
+
+/* КОНЕЦ .products-main-content  */
+
+
+/* =============== */
+/*=== CLIENTS ===*/
+/* =============== */
+
+/* НАЧАЛО .clients-main-content */
+
+.clients-main-content .container {
+    display: flex;
+    height: 494px;
+    padding-top: 17px;
+    padding-bottom: 20px;
+}
+
+.clients-main-content .container p.main-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .7em;
+    line-height: 1.5em;
+    color: #868686;
+}
+
+.clients-main-content .container .links {
+    margin: 10px 0 10px 0;
+}
+
+.clients-main-content .container .links a {
+    display: block;
+    position: relative;
+    color: #3d6f92;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 8px;
+    font-size: .7em;
+    line-height: 1.7em;
+    letter-spacing: 1px;
+}
+
+ a.links::before {
+    position: absolute;
+    content: "-";
+    font-weight: bolder;
+    left: 0;
+}
+
+.clients-main-content .container .membership {
+    flex-basis: 242px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    position: relative;
+}
+
+.clients-main-content .container .membership .header {
+    width: 238px;
+    margin: auto;
+    border-bottom: 1px dotted #dadada;
+    height: 48px;
+    padding-left: 1rem;
+    color: #f4bf1a;
+    padding-left: 16px;
+    padding-top: 16px;
+    background: url("img/memebership.png") top 4px right 6px no-repeat;
+}
+
+.clients-main-content .container .membership .header h2 {
+    font-family: "Myraid Pro Light";
+    font-size: 1.2em;
+    letter-spacing: 0.4px;
+}
+
+.clients-main-content .container .membership .main {
+    padding: 10px 17px 0 16px;
+}
+
+.clients-main-content .container .membership a.button {
+    display: block;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 71px;
+    height: 22px;
+    color: #fff;
+    font-size: 0.8em;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #294c6f, 40%,  #4db6e9);
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-left: 8px;
+}
+
+.clients-main-content .container .membership a.button:hover{
+    background: #5caed8;
+}
+
+.clients-main-content .container .clients {
+    flex-basis: 496px;
+    padding: 15px 17px 0 22px;
+}
+
+.clients-main-content .container .clients h2.titles {
+    margin-bottom: 5px;
+    font-family: serif;
+    font-family: "Myraid Pro Light";
+    font-size: 1.8em;
+}
+
+.clients-main-content .container .clients .subtitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3d6f92;
+    font-size: .8em;
+    /* margin-bottom: 3px; */
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+.clients-main-content .container .clients .labels {
+    height: 76px;
+    /* padding-top: 8px; */
+    padding-left: 102px;
+    margin-bottom: 14px;
+    margin-top: 10px;
+}
+
+.clients-main-content .container .clients .label-1 {
+    background: url("img/label-1.png") no-repeat;
+}
+
+.clients-main-content .container .clients .label-2 {
+    background: url("img/label-2.png") no-repeat;
+}
+
+.clients-main-content .container .clients .label-3 {
+    background: url("img/label-3.png") no-repeat;
+}
+
+.clients-main-content .container .clients .label-4 {
+    background: url("img/label-4.png") no-repeat;
+}
+
+/* КОНЕЦ .clients-main-content */
+
+
+/* =============== */
+/*=== SERVICES ===*/
+/* =============== */
+
+
+h2.titles {
+    font-family: serif;
+    font-family: "Myraid Pro Light";
+    font-size: 1.8em;
+}
+
+p.subtitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3d6f92;
+    font-size: .8em;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+p.main-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .7em;
+    line-height: 1.5em;
+    color: #868686;
+}
+
+a.button {
+    display: block;
+    position: absolute;
+    /* right: 16px; */
+    /* bottom: 11px; */
+    width: 71px;
+    height: 22px;
+    color: #fff;
+    font-size: 0.8em;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #294c6f, 40%,  #4db6e9);
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-left: 8px;
+}
+
+a.button:hover{
+    background: #5caed8;
+}
+
+.links a {
+    display: block;
+    position: relative;
+    color: #3d6f92;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 8px;
+    font-size: .7em;
+    line-height: 1.7em;
+    letter-spacing: 1px;
+}
+
+ .links a::before {
+    position: absolute;
+    content: "-";
+    font-weight: bolder;
+    left: 0;
+}
+
+.header {
+    width: 98%;
+    margin: auto;
+    border-bottom: 1px dotted #dadada;
+    height: 48px;
+    padding-left: 1rem;
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+/* НАЧАЛО .services-main-content */
+
+.services-main-content .container {
+    display: flex;
+    padding-top: 17px;
+    padding-bottom: 20px;
+    height: 495px;
+}
+
+.services-main-content .container .main {
+    flex-basis: 497px;
+    padding-left: 16px;
+    padding-right: 24px;
+
+}
+
+.services-main-content .container .main h2.titles {
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+.services-main-content .container .main p.subtitle {
+    margin-top: 6px;
+}
+
+.services-main-content .container .main p.main-text {
+    line-height: 17.5px;
+    margin-bottom: 17px;
+}
+
+.services-main-content .container .main a.more {
+    bottom: 30px;
+    right: 24px;
+}
+
+.services-main-content .container .main .overview {
+    position: relative;
+    height: 258px;
+    border-bottom: 1px dotted #cccccc;
+}
+
+.services-main-content .container .main .financial {
+    height: 188px;
+    overflow: hidden;
+    position: relative;
+}
+
+.services-main-content .container .main .financial h2.titles {
+    margin-top: 30px;
+    margin-bottom: 9px;
+}
+
+.services-main-content .container .main .financial .image {
+    float: left;
+}
+
+.services-main-content .container .main .financial p {
+    padding-left: 197px;
+}
+
+.services-main-content .container .main .financial a.more {
+    bottom: 0;
+    right: 24px;
+}
+
+.services-main-content .container .sidebar {
+    flex-basis: 241px;
+}
+
+.services-main-content .container .sidebar .list {
+    height: 266px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    position: relative;
+}
+
+.services-main-content .container .sidebar .list .header {
+    background: url("img/note.png") top 0px right 10px no-repeat;
+}
+
+.services-main-content .container .sidebar .list h2 {
+    font-family: "Myraid Pro Light";
+    font-size: 1.2em;
+    color: #5bae3c;
+}
+
+.services-main-content .container .sidebar .list .links {
+    margin-top: 10px;
+    padding: 0 16px;
+}
+
+.services-main-content .container .sidebar .list .links a {
+    line-height: 17px;
+}
+
+.services-main-content .container .sidebar .list .button {
+    bottom: 12px;
+    right: 16px;
+}
+
+.services-main-content .container .sidebar .unique {
+    height: 186px;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-top: 6px;
+}
+
+.services-main-content .container .sidebar .unique .header {
+    background: url("img/unique.png") top 3px right 10px no-repeat;
+}
+
+.services-main-content .container .sidebar .unique h2 {
+    font-family: "Myraid Pro Light";
+    font-size: 1.2em;
+    color: #f4bf1a;
+}
+
+.services-main-content .container .sidebar .unique p, .services-main-content .container .sidebar .unique h5 {
+    padding: 0 16px;
+}
+
+.services-main-content .container .sidebar .unique h5 {
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.services-main-content .container .sidebar .unique .button {
+    right: 16px;
+    bottom: 12px;
+}
+/* КОНЕЦ .services-main-content */
+
+
+/* =============== */
+/*=== CONTACTS ===*/
+/* =============== */
+
+/* НАЧАЛО .cocntacts */
+
+.contacts .container {
+    display: grid;
+    grid-template-columns: 241px 490px;
+    grid-template-rows: 226px 180px;
+    row-gap: 30px;
+    column-gap: 7px;
+    grid-template-areas: 
+        "info locations"
+        "form form";
+    padding-top: 17px;
+    padding-bottom: 42px;
+}
+
+.contacts .info {
+    grid-area: info;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.contacts .info .header {
+    background: url("img/info.png") top 3px right 5px no-repeat;
+}
+
+.contacts .info .header h2{
+    font-family: "Myraid Pro Light";
+    font-size: 1.2em;
+    color: #5bae3c;
+}
+
+.contacts .info .info-content {
+    padding: 10px 17px 0 17px;
+    
+}
+
+.contacts .info .info-content h5 {
+    margin-bottom: 3px;
+}
+
+.contacts .info .info-content p {
+    letter-spacing: 1px;
+}
+
+.contacts .info .contact-to {
+    margin-top: 17px;
+}
+
+.contacts .info .contact-to a {
+    display: block;
+    font-family: "Georgia", serif;
+    font-size: .7em;
+    line-height: 1.5em;
+    color: #868686;
+    line-height: 17.5px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.contacts .info .contact-to a.freephone::before {
+    content: "Freephone:";
+    margin-right: 19px;
+}
+
+.contacts .info .contact-to a.telephone::before {
+    content: "Telephone:";
+    margin-right: 20px;
+}
+
+.contacts .info .contact-to a.fax::before {
+    content: "FAX:";
+    margin-right: 55px;
+}
+
+.contacts .info .contact-to a.email::before {
+    content: "E-mail: ";
+}
+
+.contacts .locations {
+    grid-area: locations;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.contacts .locations .header {
+    background: url("img/locations.png") top 3px right 5px no-repeat;
+}
+
+.contacts .locations .header h2{
+    font-family: "Myraid Pro Light";
+    font-size: 1.2em;
+    color: #83c0e0;
+}
+
+.contacts .locations .locations-content {
+    padding: 10px 17px 0 17px
+}
+
+.contacts .locations .locations-content p {
+    line-height: 17.5px;
+}
+
+.contacts .form {
+    grid-area: form;
+    padding: 0px 15px 0px 17px;
+}
+
+.contacts .form .subtitle {
+    margin-top: 7px;
+}
+
+
+.contacts .form .form-form {
+    display: grid;
+    grid-template-columns: 178px 523px;
+    grid-template-rows: 20px 20px 20px;
+    grid-template-areas: 
+    "name message"
+    "email message"
+    "fax message";
+    gap: 5px;
+    padding-top: 0.9em;
+    position: relative;
+}
+
+.contacts .form .form-form [name=name] {
+    grid-area: name;
+    outline: none;
+    border: 1px solid #a4a4a4;
+    padding-left: 4px;
+    font-family: sans-serif;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+
+.contacts .form .form-form [name=email] {
+    grid-area: email;
+    outline: none;
+    border: 1px solid #a4a4a4;
+    padding-left: 4px;
+    font-family: sans-serif;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+
+.contacts .form .form-form [name=phone] {
+    grid-area: fax;
+    outline: none;
+    border: 1px solid #a4a4a4;
+    padding-left: 4px;
+    font-family: sans-serif;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+
+.contacts .form .form-form textarea {
+    grid-area: message;
+    outline: none;
+    resize: none;
+    border: 1px solid #a4a4a4;
+    padding-left: 4px;
+    padding-top: 3px;
+    font-family: sans-serif;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+
+.contacts .form .form-form .buttons {
+    position: absolute;
+    width: 51px;
+    height: 22px;
+    border: transparent;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #294c6f, 40%, #6fcfff);
+    color: #fff;
+}
+
+.contacts .form .form-form .buttons:hover {
+    cursor: pointer;
+    background: #5caed8;
+}
+
+.contacts .form .form-form [value=send] {
+    bottom: -28px;
+    right: 1px;
+}
+
+.contacts .form .form-form [value=clear] {
+    bottom: -28px;
+    right: 59px;
+}
+/* КОНЕЦ .cocntacts */
+
+
+/* =============== */
+/*=== PRIVACY ===*/
+/* =============== */
+
+/* НАЧАЛО .privacy-main-content */
+
+.privacy-main-content .container {
+    padding: 28px 17px 20px;
+}
+
+.privacy-main-content .container h2 {
+    font-family: "Myraid Pro Light";
+    font-size: 1.8em;
+}
+
+.privacy-main-content .container .states {
+    margin-top: 1em;
+}
+
+.privacy-main-content .container .state1 {
+    margin-top: 0.5em;
+}
+
+.privacy-main-content .container .states p.main-text {
+    line-height: 1.6em;
+}
+
+.privacy-main-content .container .email {
+    color: #3d6f92;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .9em;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    margin-left: 55px;
+    margin-top: 18px;
+}
+
+.privacy-main-content .container .email::before {
+    content: "E-mail: ";
+    border-bottom: 1px solid transparent;
+    position: absolute;
+    left: -55px;
+    top: 0px;
+} 
+/* КОНЕЦ .privacy-main-content */

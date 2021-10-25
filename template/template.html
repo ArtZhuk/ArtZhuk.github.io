@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 1170px;
+            margin: auto;
+        }
+
+        .cols {
+            display: flex;
+
+        }
+        .col {
+            width: 33%;
+        }
+
+        header {
+			background: #636363;
+            height: 670px;
+            color:white; 
+        }
+
+        header a {
+            color: white; 
+        }
+
+        .center, h1, h2 {
+            width: 770px;
+            margin: auto;
+            text-align: center;
+        }
+
+        header .container {
+            position: relative;
+            /* Препятствует утеканию margin-top */
+            /* overflow: hidden; */
+            /* padding-top: 1px; */
+            /* background: rgb(101, 197, 146); */
+            height: 670px;
+        }
+
+        .menu-top  {
+            position: absolute;
+            top:10px;
+            right: 0px;
+        }
+
+        .menu-top ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .menu-top a {
+            text-decoration: none;
+            display: block;
+            padding: 5px 10px;
+            text-transform: uppercase;
+            /* Не дает 'подпрыгивать' эл-ту при наведении */
+            border-bottom: 4px solid transparent;
+            transition: all .2s .1s linear;
+        }
+
+        .menu-top a:hover  {
+            border-color:  rgb(219, 219, 219);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            /* font-family: 'Work Sans', sans-serif; */
+        }
+
+        .container .lead  {
+            color: #5f5f5f;
+            line-height: 1.6em;
+            margin-top: 20px;
+        }
+
+        header p:first-of-type {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 260px;
+            /* background: rgb(197, 107, 107); */
+        }
+
+        header p:last-of-type {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-style: italic;
+        }
+
+        .down {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #bebebe;
+            margin: auto;
+            display: block;
+            border-radius: 50px;
+            position: relative;
+            top: 150px;
+            transition: all .2s .1s linear;
+        }
+
+        .down:hover {
+            background: #777676;
+        }
+
+        .down:hover::after {
+            border-color: #000000;
+        }
+
+        .down::after{
+            content: "";
+            /* absolutly or fixedly positioned el-t is always block */
+            /* display: block; */
+            height: 7px;
+            width: 7px;
+            /* border: 1px solid #cccccc; */
+            border-top: 1px solid #bebebe;
+            border-left: 1px solid #bebebe;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transform: rotate(225deg);
+        }
+
+        /* Начало .about */
+        .about {
+            height: 422px;
+            background: #f6f6f6;
+        }
+        .about .container{
+            height: 422px;
+            text-align: center;
+            overflow: hidden;
+            /* background: rgb(106, 155, 211); */
+        }
+
+        .about h2 {
+            /* border: 1px solid #000; */
+            margin-top: 90px;
+            font-size: 2.5rem;
+            color: #171717;
+        }
+
+        .about .sign {
+            margin-top: 30px;
+        }
+        /* Конец .about */
+        
+
+        /* НАЧАЛО .stats */
+        .stats {
+             background: #313131;
+             background-image: url('img/stats-bground.png');
+        }
+        .stats .container {
+            height: 260px;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .stats .container .cols {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .stats .container .cols .col {
+            position: relative;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            /* background: rgba(228, 12, 12, 0.212); */
+
+        }
+
+        .stats .container .cols .col i {
+            font-size: 2em;
+            font-weight: 100;
+            position: absolute;
+            /* left: -25px; */
+            /* top: 5px; */
+
+        }
+
+        .stats .container .cols .col p {
+            padding-left: 50px;            
+        }
+
+        .stats .container .cols .col p:nth-child(3){
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+        /* КОНЕЦ .stats  */
+
+
+        /* НАЧАЛО .projects */
+
+        .projects .container{
+            height: 1450px;
+        }
+
+        .projects .container .best-proj {
+            height: 260px;
+            padding-top: 85px;
+        }
+
+        .projects .container .best-proj h2.center {
+           margin-bottom: 35px;
+           font-size: 220%;
+        }
+
+        .projects .container .cols {
+            display: flex;
+            gap: 30px;
+        }
+
+        .projects .container .col {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .projects .container .col .stone-small {
+            width: 370px;
+            height: 250px;
+        }
+
+        .projects .container .col .stone-big {
+            width: 370px;
+            height: 530px;
+        }
+
+        .projects .container .col2 :nth-child(2) {
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .projects .container .col2 :nth-child(2) h3 {
+            padding-top: 95px;
+            margin-bottom: 10px;
+            font-size: 150%;
+        }
+
+        .projects .container .col2 :nth-child(2) p {
+            text-transform: uppercase;
+            font-size: 0.7em;
+            font-family: sans-serif;
+        }
+        /* КОНЕЦ .projects */
+
+
+        /* НАЧАЛО .review */
+
+        .review {
+            background-image: url("img/review-bg.png");
+            background-color: #313131;
+        }
+
+        .review .container {
+            height: 500px;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .review .container .customer-review {
+            margin-top: 170px;
+            margin-bottom: 30px;
+            font-style: italic;
+            font-size: 1.6em;
+        }
+
+        .review .container .customer-name {
+            text-transform: uppercase;
+            font-family: sans-serif;
+        }
+        /* КОНЕЦ .review */
+
+
+        /* НАЧАЛО .partners */
+        .partners {
+            height: 200px;
+            background: #fff;
+        }
+
+        .partners .container {
+            overflow: hidden;
+        }
+
+        .partners .container .cols {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            margin-top: 50px;
+        }
+
+        .partners .container .col {
+            width: 130px;
+            height: 100px;
+            
+        }
+
+        .partners .container .col1 {
+           background-image: url("img/partner-1.png"); 
+        }
+
+        .partners .container .col2 {
+           background-image: url("img/partner-2.png"); 
+        }
+
+        .partners .container .col3 {
+           background-image: url("img/partner-3.png"); 
+        }
+
+        .partners .container .col4 {
+           background-image: url("img/partner-4.png"); 
+        }
+
+        .partners .container .col5 {
+           background-image: url("img/partner-5.png"); 
+        }
+        /* КОНЕЦ .partners */
+
+
+        /* НАЧАЛО .blog */
+
+        .blog {
+            background: #f6f6f6;
+            padding-top: 90px;
+        }
+
+        .blog .cols {
+            margin-top: 50px;
+            justify-content: space-between;
+        }
+
+        .blog .col {
+            width: 30%;
+            background: #ffffff;
+            /* border: 1px solid #000; */
+        }
+
+        .blog .col img {
+            width: 100%;
+        }
+
+        .blog .col h3, .blog .col p {
+            margin: 10px 20px;
+        }
+
+        .blog .data {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: .9em;
+            font-family: sans-serif;
+        }
+
+        .blog .col p {
+            color: rgb(119,119,119);
+            font-family: sans-serif;
+        }
+
+        .blog .col{
+            position: relative;
+        }
+
+        .blog .col::before {
+            content: attr(data-title);
+            position: absolute;
+            display: inline-block;
+            top: 180px;
+            left: 10px;
+            background: #252525;
+            color: #fff;
+            padding: 10px 30px;
+            text-transform: uppercase;
+            font-family: sans-serif;
+        }
+        /* КОНЕЦ .blog */
+
+
+        /* НАЧАЛО .form */
+       
+        .form {
+            height: 625px;
+            background: #f6f6f6;
+        }
+
+        .form .container {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-top: 100px;
+            gap: 50px;
+        }
+
+        .form .container .contact-info {
+            flex-basis:  40%;
+            /* background: rgba(64, 121, 67, 0.438); */
+            max-width: 40%;
+            font-family: sans-serif;
+            line-height: 1.4em;
+        }
+
+        .form .container .form-area{
+            flex-basis:  60%;
+            /* background: rgba(204, 201, 15, 0.411); */
+            /* border: 5px solid rgb(25, 214, 41);     */
+        }
+
+        .form .container .contact-info h2 {
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 220%;
+            font-family: serif;
+        }
+
+        .form .container .contact-info p {
+            padding-right: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form .contact-info table {
+            border-spacing: 0 1em;
+        }
+
+        .form .contact-info .title {
+            font-weight: bold;
+        }
+
+        .form .contact-info .title + td {
+            padding-left: 10px;
+        }
+
+        .form .container .form-area {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            gap: 30px;
+        }
+
+        .form .container .form-area .name {
+            flex: 1 1 45%;
+        }
+
+        .form .container .form-area .name input {
+            width: 100%;
+            height: 3em;
+            padding-left: 10px;
+            border-color: transparent;
+        }
+        
+        .form .container .form-area .email {
+            flex: 1 1 45%;
+        }
+
+        .form .container .form-area .email input {
+            width: 100%;
+            height: 3em;
+            padding-left: 10px;
+            border-color: transparent;
+        }
+
+        .form .container .form-area .form-title {
+            flex: 1 1 100%;
+        }
+
+        .form .container .form-area .form-title textarea {
+            width: 100%;
+            height: 3em;
+            resize: none;
+            line-height: 1.4em;
+            padding-top: .8em;
+            padding-left: 10px;
+            border-color: transparent;
+        }
+
+        .form .container .form-area .form-comment {
+            flex: 1 1 100%;
+        }
+
+        .form .container .form-area .form-comment textarea {
+            width: 100%;
+            resize: none;
+            line-height: 1.4em;
+            padding-left: 10px;
+            padding-top: .9em;
+            border-color: transparent;
+        }
+
+        input[type=submit] {
+            display: inline-block;
+            border-color: transparent;
+            width: 180px;
+            height: 55px;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            /* font-weight: 600; */
+            background: #252525;
+            color: #fff;
+            transition: ease-in-out .2s .0s;
+        }
+
+        input[type=submit]:hover {
+            background: #666;
+            cursor: pointer;
+        }
+
+        /* КОНЕЦ .form */
+
+
+        /* НАЧАЛО .footer */
+        footer {
+            /* height: 483px; */
+            background-image: url('img/footer-bg.png');
+        }
+
+        footer, footer a {
+            color: #fff;
+        }
+
+        footer .cols {
+            justify-content: space-between;
+        }
+        footer .cols .col {
+            width: 32%;
+            /* border: 10px solid red; */
+        }
+        
+        footer p {
+            margin-top: 20px;
+            color: #e9e9e9;
+            line-height: 1.4em;
+        }
+
+        footer h3 {
+            margin-top: 70px;
+        }
+
+        footer .icons {
+            margin-top: 30px;
+        }
+
+        footer .icons i {
+            padding: 4px;
+        }
+
+        footer .col2 p {
+            position: relative;
+            left: 30px;
+            width: 91%;
+        }
+        footer .col2 i {
+            position: absolute;
+            left: -30px;
+            top: 5px;
+        }
+
+        footer .col3 img {
+            width: 98%;
+        }
+        /* КОНЕЦ .footer  */
+
+        .copyright {
+            margin-top: 40px;
+            border-top: 1px solid #454545;
+            text-align: center;
+            padding: 30px 0;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="" class="logo"><img src="img/logo.png" alt=""></a>
+            <nav class="menu-top">
+                <ul>
+                    <li><a href="#">Lorem.</a></li>
+                    <li><a href="#">Aliquid!</a></li>
+                    <li><a href="#">Tempora.</a></li>
+                    <li><a href="#">Laboriosam?</a></li>
+                    <li><a href="#">Dolore!</a></li>
+                </ul>
+            </nav>
+            <p class="center">Lorem, ipsum dolor.</p>
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p class="center">Lorem ipsum dolor sit.</p>
+
+            <a href="#" class="down"></a>
+        </div>
+    </header>
+    <section class="about">
+        <div class="container">
+            <h2>About Our Agency.</h2>
+            <p class="center lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, voluptatem. Odio quam tenetur recusandae commodi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam officia perferendis minima aspernatur est corporis?</p>
+            <img class="sign" src="img/signature.png" alt="">
+        </div>
+    </section>
+    <section class="stats">
+        <div class="container">
+            <div class="cols">
+                <div class="col col1">
+                    <i class="fas fa-briefcase"></i>
+                    <p class="nums">541</p>
+                    <p class="title">Lorem, ipsum.</p>
+                </div>
+                <div class="col col2">
+                    <i class="far fa-clock"></i>
+                    <p class="nums">542</p>
+                    <p class="title">Iure, laborum.</p>
+                </div>
+                <div class="col col3">
+                    <i class="far fa-star"></i>
+                    <p class="nums">543</p>
+                    <p class="title">Lorem, ipsum.</p>
+                </div>
+                <div class="col col4">
+                    <i class="far fa-heart"></i>
+                    <p class="nums">544</p>
+                    <p class="title">Accusamus, delectus!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects">
+        <div class="container">
+            <div class="best-proj">
+                <h2 class="center">Best Projects</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, non?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur repellendus.</p>
+            </div>
+            <div class="cols">
+                <div class="col col1">
+                    <div class="stone stone-small"><img src="http://placehold.it/370x250" alt=""></div>
+                    <div class="stone stone-small"><img src="http://placehold.it/370x250" alt=""></div>
+                    <div class="stone stone-big"><img src="http://placehold.it/370x530" alt=""></div>
+                </div>
+                <div class="col col2">
+                    <div class="stone stone-big"><img src="http://placehold.it/370x530" alt=""></div>
+                    <div class="stone stone-small">
+                        <h3 class="">Vinil Record</h3>
+                       <p>photography</p>                         
+                    </div>
+                    <div class="stone stone-small"><img src="http://placehold.it/370x250" alt=""></div>
+                </div>
+                <div class="col col3">
+                    <div class="stone stone-small"><img src="http://placehold.it/370x250" alt=""></div>
+                    <div class="stone stone-big"><img src="http://placehold.it/370x530" alt=""></div>
+                    <div class="stone stone-small"><img src="http://placehold.it/370x250" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="review">
+        <div class="container">
+            <p class="center customer-review">
+                <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis voluptatem at blanditiis? Sed libero ad veritatis! Possimus dolor accusamus esse iste. Vitae assumenda molestiae laboriosam, tempore odit placeat eligendi commodi.
+                </q>
+            </p>
+            <p class="center customer-name">
+                John Doe
+            </p>
+        </div>
+    </section>
+    <section class="partners">
+        <div class="container">
+            <div class="cols">
+                <div class="col col1"></div>
+                <div class="col col2"></div>
+                <div class="col col3"></div>
+                <div class="col col4"></div>
+                <div class="col col5"></div>
+            </div>
+        </div>
+    </section>
+    <section class="blog">
+        <div class="container">
+            <h2>Lorem, ipsum.</h2>
+            <p class="center lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas assumenda laudantium temporibus vel, optio placeat?</p>
+
+            <div class="cols">
+                <div class="col col1" data-title="nature">
+                    <img src="http://placehold.it/370x240" alt="">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p class="data">29 dec 2020</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas delectus tenetur accusantium sapiente, officiis nulla perspiciatis repellendus eaque sed perferendis.</p>
+                </div>
+                <div class="col col2" data-title="branding">
+                    <img src="http://placehold.it/370x240" alt="">
+                    <h3>Qui voluptatibus cumque ipsum quaerat.</h3>
+                    <p class="data">29 dec 2020</p>
+                    <p>Nulla natus doloremque rem. Cupiditate beatae at laborum commodi! Voluptatibus sint quaerat dolores incidunt nemo, possimus odit facere repellat natus?</p>
+                </div>
+                <div class="col col3" data-title="design">
+                    <img src="http://placehold.it/370x240" alt="">
+                    <h3>Eaque ratione ducimus sapiente ullam?</h3>
+                    <p class="data">29 dec 2020</p>
+                    <p>Neque exercitationem soluta explicabo. Velit, atque. Esse vitae quaerat aperiam sapiente quasi suscipit nihil quod nesciunt, eius est omnis quo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="form">
+        <div class="container">
+            <div class="contact-info">
+               <h2>Contact Info:</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius iusto expedita veniam quisquam fugit voluptates illum ! Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum delectus sequi iusto culpa autem laboriosam.</p>
+               <table>
+                <tr>
+                    <td class="title address">Address:</td>
+                    <td class="value-address">101011 Lorem, ipsum dolor, LA</td>
+                </tr>
+                <tr>
+                    <td class="title phone">Phone:</td>
+                    <td class="value-phone"> +44 689 302 897    
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title email">Email:</td>
+                    <td class="value-email">info@example.com
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title fax">Fax:</td>
+                    <td class="value-fax">+44 689 302 893
+                    </td>
+                </tr>
+                </table>           
+            </div>
+
+            <form action="#" method="get">
+                    <div class="form-area">
+                    <div class="name">
+                        <input type="text" name="contact-name"  placeholder="Your Name">
+                    </div>
+                    <div class="email">
+                        <input type="email" name="contact-email" placeholder="Your Email">
+                    </div>
+                    <div class="form-title"><textarea name="contact-title" cols="30" rows="1" placeholder="Your Title" maxlength="85"></textarea></div>
+                    <div class="form-comment"><textarea name="contact-comment" cols="30" rows="10" placeholder="Your Comment"></textarea>
+                    </div>
+                    <div class="button"><input type="submit" value="send message">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="cols">
+                <div class="col col1">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi hic ducimus non neque ullam quibusdam, quo error suscipit excepturi, necessitatibus, quasi rerum quae possimus laudantium officia dolorem! A, quam molestiae.</p>
+
+                    <div class="icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="col col2">
+                    <h3>Consequatur, beatae!</h3>
+                    <p><i class="fab fa-twitter"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, perferendis.</p>
+                    <p><i class="fab fa-twitter"></i>Quo iusto voluptates tempore natus voluptas repellat sunt vel nobis.</p>
+                    <p><i class="fab fa-twitter"></i>Sunt sint rerum id libero quaerat ut explicabo vitae rem?</p>
+                </div>
+                <div class="col col3">
+                    <h3>Tempore, aspernatur.</h3>
+                    <div class="cols">
+                        <div class="col col1"><img src="http://placehold.it/85x85" alt=""></div>
+                        
+                        <div class="col col2"><img src="http://placehold.it/85x85" alt=""></div>
+                        
+                        <div class="col col3"><img src="http://placehold.it/85x85" alt=""></div>
+                        
+                        <div class="col col4"><img src="http://placehold.it/85x85" alt=""></div>
+                    </div>
+                    <div class="cols">
+                        <div class="col col1"><img src="http://placehold.it/85x85" alt=""></div>
+                        
+                        <div class="col col2"><img src="http://placehold.it/85x85" alt=""></div>
+                        
+                        <div class="col col3"><img src="http://placehold.it/85x85" alt=""></div>
+                        
+                        <div class="col col4"><img src="http://placehold.it/85x85" alt=""></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2020 Made in Russia
+        </div>
+    </footer>
+</body>
+</html>

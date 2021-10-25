@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.container > * {
+  width: 90%;
+  margin: auto;
+}
+
+a.button {
+  display: block;
+  width: 17.6rem;
+  height: 4.6rem;
+  padding: 1rem 0 0.25rem 0;
+  border-radius: 2.1rem;
+  background: #085CE8;
+  font-family: Barlow;
+  font-size: 1.9rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.heading h2 {
+  position: relative;
+  padding: 4rem;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 3.6rem;
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+}
+.heading h2::after {
+  content: "";
+  position: absolute;
+  height: 0px;
+  width: 18rem;
+  bottom: 0.4rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 3px solid rgba(8, 92, 232, 0.85);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+nav {
+  height: 11.25rem;
+}
+nav .container {
+  height: 100%;
+}
+nav .content {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+nav .content .dropdown {
+  position: relative;
+  cursor: pointer;
+}
+nav .content .dropdown ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  width: 250%;
+}
+nav .content .dropdown ul li {
+  list-style-type: none;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+nav .content .dropdown ul li a {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  color: #444;
+}
+nav .content .dropdown:hover ul {
+  display: block;
+}
+nav .content .search input {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+  padding: 0.8rem 3rem 0.8rem 1.5rem;
+  background: #E4E3E3;
+  background: url("images/mag.png") right no-repeat;
+  border: 1px solid #B8B8B8;
+  border-radius: 10px;
+}
+nav .content .social {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+nav .content .social a {
+  text-decoration: none;
+}
+nav .content .slogan {
+  justify-self: end;
+}
+nav .content .slogan p {
+  padding-left: 1rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.services .container {
+  max-width: 1440px;
+}
+.services .container .content {
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+.services .container .content .image {
+  flex: 1 2 40%;
+}
+.services .container .content .plates {
+  flex: 3 1 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 12.8rem);
+}
+.services .container .content .plates .plate {
+  position: relative;
+  flex: 1 1 50%;
+  font-family: "Barlow", sans-serif;
+  color: #fff;
+  font-size: 2.25rem;
+  line-height: 105.6%;
+  text-align: center;
+  padding: 1.15rem 1.25rem;
+}
+.services .container .content .plates .plate::after {
+  position: absolute;
+  content: "";
+  width: 78px;
+  height: 73px;
+  right: 0;
+  bottom: 1rem;
+  left: 0;
+  margin: auto;
+}
+.services .container .content .plates .plate-top-left {
+  background: #085CE8;
+}
+.services .container .content .plates .plate-top-left::after {
+  background: url("images/family-in-home-01.png");
+}
+.services .container .content .plates .plate-top-right {
+  background: #0483FF;
+}
+.services .container .content .plates .plate-top-right::after {
+  background: url("images/handy-01.png");
+}
+.services .container .content .plates .plate-bottom-left {
+  background: #08B4E8;
+}
+.services .container .content .plates .plate-bottom-left::after {
+  background: url("images/family-in-homek-01.png");
+}
+.services .container .content .plates .plate-bottom-right {
+  background: #08C6FF;
+}
+.services .container .content .plates .plate-bottom-right::after {
+  background: url("images/arow-01.png");
+}
+
+.article .container {
+  padding-bottom: 215px;
+}
+.article .container .button {
+  position: absolute;
+  bottom: -120px;
+}
+.article .article-heading {
+  text-align: center;
+  position: relative;
+}
+.article .article-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.article .article-content .article-main {
+  position: relative;
+  flex-basis: 40%;
+}
+.article .article-content .article-main h5 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+}
+.article .article-content .article-main p {
+  padding-top: 27px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 46.08px;
+}
+.article .article-content .article-topics {
+  flex-basis: 45%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2em;
+  min-width: 535px;
+}
+.article .article-content .article-topics .article-topics-heading {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+.article .article-content .article-topics .article-topics-heading h5 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+}
+.article .article-content .article-topics .article-topics-left-col {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 64.8px;
+}
+.article .article-content .article-topics .article-topics-right-col {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 64.8px;
+}
+.article .article-content .article-topics ul {
+  list-style-type: none;
+}
+.article .article-content .article-topics ul a {
+  text-decoration: none;
+  color: #002761;
+}
+
+.cards {
+  background: #e5ecf7;
+  padding: 4.3rem 0 2.1rem 0;
+}
+.cards .container {
+  padding: 69px auto 34px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.cards .card {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 386px;
+  max-height: 542px;
+  text-align: center;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+}
+.cards .card h5 {
+  font-family: "Barlow", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 0.7rem;
+  margin-top: 18.5rem;
+}
+.cards .card p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.4rem;
+}
+.cards .card .card-link {
+  width: 90%;
+  margin: 3.3rem auto 0 auto;
+  text-align: center;
+  border-top: 1px solid #b5c8e87c;
+  padding: 0.5rem 0 1.4rem 0;
+}
+.cards .card .card-link a {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.4rem;
+  color: #002761;
+  text-decoration: none;
+}
+.cards .card-1 {
+  background: url("images/group-2.png") no-repeat;
+}
+.cards .card-2 {
+  background: url("images/group-3.png") no-repeat;
+}
+.cards .card-3 {
+  background: url("images/group-4.png") no-repeat;
+}
+
+.ads .container {
+  width: 90%;
+}
+.ads .container .heading {
+  padding-bottom: 4.6rem;
+}
+.ads .container .features {
+  display: flex;
+  justify-content: space-evenly;
+}
+.ads .container .features .feature {
+  max-height: 344px;
+  padding: 0 1rem;
+  text-align: center;
+}
+.ads .container .features .feature .image {
+  height: 7.8rem;
+}
+.ads .container .features .feature h5 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 1.6rem 0 1.3rem 0;
+}
+.ads .container .features .feature p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.ads .container .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0 5rem 0;
+}
+.ads .container .button-container .button {
+  width: 12.7rem;
+}
+
+.contacts {
+  background: #e5ecf7;
+}
+.contacts .container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 1.1rem 0 5.2rem 0;
+}
+.contacts .container .heading {
+  padding: 0 0 3.7rem 0;
+}
+.contacts .container a {
+  text-decoration: none;
+}
+.contacts .container .clinics {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contacts .container .clinics .clinic {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.9rem;
+  color: #002761;
+  text-align: center;
+}
+
+footer {
+  height: 15rem;
+  background: #4f4f4fb0;
+}
+
+@media screen and (max-width: 1200px) {
+  nav .content .logo {
+    order: 0;
+    flex-basis: 80%;
+  }
+  nav .content .dropdown {
+    order: 1;
+  }
+  nav .content .search {
+    order: 2;
+  }
+  nav .content .search input {
+    width: 1rem;
+    height: 4.4rem;
+  }
+  nav .content .search input:focus {
+    width: 100%;
+    padding-left: 0.5rem;
+  }
+  nav .content .slogan {
+    display: none;
+  }
+  nav .content .social {
+    display: none;
+  }
+
+  .services .content {
+    flex-direction: column;
+  }
+  .services .content .image img {
+    width: 100%;
+  }
+  .services .content .plates {
+    width: 100%;
+    margin-top: -1rem;
+  }
+
+  .article .button {
+    display: none;
+  }
+  .article .article-content {
+    flex-direction: column;
+  }
+  .article .article-content .article-main {
+    flex-basis: 100%;
+  }
+  .article .article-content .article-topics {
+    margin-top: 5rem;
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+
+  .cards .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .cards .container .card {
+    flex-basis: 100%;
+  }
+
+  .ads .button {
+    display: none;
+  }
+  .ads .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .ads .features .feature {
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .contacts .clinics {
+    flex-direction: column;
+  }
+  .contacts .clinics img {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=big-family.css.map */

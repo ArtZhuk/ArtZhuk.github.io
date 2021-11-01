@@ -1,0 +1,46 @@
+.showcase {
+  /* background-image: url(img/showcase-bgc-1.jpg); */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-shadow: 0 0 10px white;
+}
+
+.showcase_bg_0 {
+  background-image: url(img/showcase-bg-0.jpg);
+}
+
+.showcase_bg_1 {
+  background-image: url(img/showcase-bg-1.jpg);
+}
+
+.showcase_bg_2 {
+  background-image: url(img/showcase-bg-2.jpg);
+}
+
+.showcase_bg_3 {
+  background-image: url(img/showcase-bg-3.jpg);
+  text-shadow: 0 0 10px black;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border-radius: 10px;
+}
+
+@media (min-width: 992px) {
+  .program {
+    -webkit-columns: 12rem 2;
+    -moz-columns: 12rem 2;
+    columns: 12rem 2;
+  }
+
+  .program h1,
+  .subheader {
+    -webkit-column-span: all;
+    -moz-column-span: all;
+    column-span: all;
+  }
+}

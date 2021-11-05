@@ -7,10 +7,10 @@
 }
 
 .showcase {
-  background-image: url(img/showcase-light.jpg);
+  background-image: url(img/showcase-f.jpg);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: cover;
+  background-size: contain;
   /* text-shadow: 
    0 0 15px rgb(0, 0, 0),
   -2px -2px 0 #f00,
@@ -18,31 +18,31 @@
   -2px 2px 0 #f00,
    2px 2px 0 #f00; */
   min-height: 30rem;
-  animation-name: black-white;
-  animation-duration: 6s;
+  /* animation-name: black-white;
+  animation-duration: 6s; */
 }
 
 .showcase-text-a {
   text-shadow: 
    0 0 15px rgb(0, 0, 0),
-  -2px -2px 0 #00f,
-   2px -2px 0 #00f,
-  -2px 2px 0 #00f,
-   2px 2px 0 #00f;
+  -2px -2px 0 #000,
+   2px -2px 0 #000,
+  -2px 2px 0 #000,
+   2px 2px 0 #000;
 }
 
 .showcase-text-b {
   text-shadow: 
    0 0 15px rgb(0, 0, 0),
-  -2px -2px 0 #f00,
-   2px -2px 0 #f00,
-  -2px 2px 0 #f00,
-   2px 2px 0 #f00;
+  -2px -2px 0 #000,
+   2px -2px 0 #000,
+  -2px 2px 0 #000,
+   2px 2px 0 #000;
 }
 
-.h1-cs {
+/* .h1-cs {
   font-size: 3rem;
-}
+} */
 
 a.social-media-link {
   text-decoration: none;

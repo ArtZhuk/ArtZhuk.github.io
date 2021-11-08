@@ -10,7 +10,7 @@
   background-image: url(img/showcase-light.jpg);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   /* text-shadow: 
    0 0 15px rgb(0, 0, 0),
   -2px -2px 0 #f00,

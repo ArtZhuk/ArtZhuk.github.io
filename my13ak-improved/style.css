@@ -183,15 +183,20 @@ body {
   text-align: center;
 }
 
+.footer p {
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 768px){
   .showcase article {
-    /* background-position: center top calc(10.5rem * 10.5vw); */
-    background-position: center bottom;
+    /* background-position: center top calc(10.5rem * 10vw); */
+    background-position: center top;
+    padding-top: 2rem;
   }
 
   .showcase p.rank {
     letter-spacing: normal;
-    font-size: calc(1.2rem + 1.1vw);
+    font-size: calc(1.2rem + 1.2vw);
   }
 
   .about img {

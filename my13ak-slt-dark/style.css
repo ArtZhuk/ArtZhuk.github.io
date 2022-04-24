@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap');
+
+@font-face {
+  font-family: starwars-v1;
+  src:
+    url("./fonts/STARWARS.ttf"),
+    url("./fonts/STARWARS.woff"),
+    url("./fonts/STARWARS.eot"),
+    url("./fonts/STARWARS.svg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #000;
+
+}
+
+.header {
+  padding: 2rem 3rem 1rem 3rem;
+  background: #000;
+  /* height: 20rem; */
+  position: relative;
+}
+
+.header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.header nav {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  min-height: max-content;
+  margin: 1rem auto;
+}
+
+.header nav ul {
+  list-style-type: none;
+  /* display: flex;
+  justify-content: end; */
+}
+
+.header nav li {
+  min-height: fit-content;
+}
+
+.header nav a {
+  text-decoration: none;
+  padding: .5rem .5rem;
+  color: #888;
+  font-size: 1.21rem;
+  border: 2px solid #888;
+  border-radius: 15px;
+}
+
+.header nav a:hover {
+  color: #aaa;
+  border-color: #aaa;
+}
+
+.showcase {
+  padding: 2rem 0;
+}
+
+.showcase h1 {
+  font-family: 'Ruslan Display', cursive;
+  font-size: calc(1.9rem + 1.4vw);
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  /* text-shadow:
+    1px 1px 0 #444,
+    -1px -1px 0 #444,
+    -1px 1px 0 #444,
+    1px -1px 0 #444; */
+  letter-spacing: 1.4px;
+  padding: .8rem 0rem;
+}
+
+.showcase article {
+  height: 24rem;
+  /* height: 50vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(img/showcase-light.jpg);
+  background-size: cover;
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.showcase p {
+  /* font-size: 1.2rem; */
+  font-size: calc(1.0rem + 1.1vw);
+  color: #f8f9fb;
+  letter-spacing: -1px;
+  line-height: 1.6rem;
+  text-shadow:
+    0px 0px 10px #000,
+    1px 1px 5px #000,
+    -1px -1px 5px #000,
+    -1px 1px 5px #000,
+    1px -1px 5px #000;
+  text-align: center;
+}
+
+.showcase p.slogan {
+  font-size: calc(1.25rem + 1.1vw);
+}
+
+.about {
+  padding: 1rem 3rem 2rem 3rem;
+}
+
+.about img {
+  height: auto;
+  max-width: 100%;
+}
+
+.about h1 {
+  font-size: calc(1.4rem + 0.6vw);
+  font-weight: 600;
+  color: #bcbcbc;
+  text-align: center;
+  line-height: 1.2rem;
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  margin-bottom: 1rem;
+  font-size: 1.21rem;
+  line-height: 2.2rem;
+  font-weight: 300;
+  color: #bcbcbc;
+}
+
+.bold-text {
+  font-weight: 600;
+}
+
+.smaller-text {
+  font-size: 1rem;
+}
+
+.centered {
+  text-align: center;
+}
+
+.about footer {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.contacts {
+  padding: 3rem;
+  background: #313131;
+}
+
+.contacts .contact-info h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: #bcbcbc;
+  font-size: calc(1.325rem + .9vw);
+  line-height: 1.4rem;
+}
+
+.contacts ul {
+  list-style-type: none;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #bcbcbc;
+}
+
+.contacts li {
+  padding: 0.5rem 1rem;
+  line-height: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.contacts li:last-child {
+  border-width: 0;
+}
+
+.contacts [class^=social-media-row] {
+  display: flex;
+  gap: 1rem;
+}
+
+.contacts .social-media {
+  color: #d0d0d0;
+}
+
+.contacts a[href*='facebook'],
+.contacts a[href*='instagram'] {
+  display: none;
+}
+
+.contacts .social-media-row-a {
+  margin-left: -0.5rem;
+}
+
+.contacts .vk-grey {
+  color: #999;
+}
+
+.contacts a.slt-link img {
+  width: 22px;
+  height: auto;
+  border: solid 1px #313131;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  max-height: 320px;
+  border-radius: 10px;
+}
+
+.footer {
+  padding: 3rem;
+  background: #555555;
+  color: #d1d1d1;
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #d1d1d1;
+
+}
+
+/* || SLT */
+
+.body-slt {
+  background: #000;
+}
+
+.header-slt {
+  background: #000;
+}
+
+.header-slt .container {
+  background: #000;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.header-slt h1.starwars {
+  font-family: "starwars-v1", sans-serif;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  font-size: calc(2rem + .42vw);
+  /* font-size: 2rem; */
+  line-height: 2.2rem;
+  text-shadow:
+    0px 0px 0px white,
+    1px 1px 0px white,
+    -1px -1px 0px white,
+    -1px 1px 0px white,
+    1px -1px 0px white;
+}
+
+.showcase-slt {
+  padding-top: 1.5rem;
+  padding-bottom: 0rem;
+}
+
+.showcase-slt h1 {
+  font-family: monospace;
+  text-transform: capitalize;
+  text-shadow:
+    0px 0px 0px blue,
+    1px 1px 0px blue,
+    3px 3px 5px blue,
+    /* 10px 10px 15px blue, */
+    -1px -1px 0px blue,
+    -3px -3px 5px blue,
+    /* -10px -10px 15px blue, */
+    -1px 1px 0px blue,
+    -3px 3px 5px blue,
+    /* -10px 10px 10px blue, */
+    1px -1px 0px blue,
+    3px -3px 5px blue;
+  color: white;
+  position: absolute;
+  top: -999999px;
+  left: -999999px;
+  /* visibility: hidden; */
+}
+
+.showcase-slt article {
+  background-image: none;
+  height: auto;
+  padding-top: 0;
+}
+
+.showcase-slt article img {
+  width: 100%;
+  height: auto;
+}
+
+.main-slt .subheader {
+  margin-bottom: 1.5rem;
+  font-family: American Typewriter;
+  /* font-size: 1.7rem; */
+  font-size: calc(1.7rem + .9vw);
+  text-align: center;
+  color: #252525;
+  text-shadow:
+    0px 0px 0px white,
+    1px 1px 0px white,
+    -1px -1px 0px white,
+    -1px 1px 0px white,
+    1px -1px 0px white;
+}
+
+.main-slt h3 {
+  font-size: 1.21rem;
+  margin-top: 1.4rem;
+}
+
+.main-slt p,
+.main-slt h3 {
+  color: #C4C4C4;
+  text-align: center;
+}
+
+.main-slt ol {
+  margin: 1rem auto 1.5rem;
+}
+
+.main-slt li {
+  color: #C4C4C4;
+  font-size: 1.21rem;
+  margin: 1rem auto;
+  margin-left: 30px;
+}
+
+.contacts-slt {
+  background: #313131;
+  color: #C4C4C4;
+}
+
+.contacts-slt li,
+.contacts-slt h2,
+.contacts-slt a.social-media {
+  color: #d1d1d1;
+}
+
+.contacts-slt h2 {
+  font-size: calc(1.325rem + .9vw);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contacts-slt a.vk-dark-yellow {
+  color: #888;
+}
+
+.contacts-slt a.livejournal img,
+.contacts-slt a.my13ak-link img {
+  width: 22px;
+  height: auto;
+}
+
+.footer-slt {
+  background: #555;
+}
+
+.footer-slt a,
+.footer-slt p {
+  color: #d1d1d1;
+}
+
+@media (min-width: 768px) {
+  .showcase article {
+    /* background-position: center top calc(10.5rem * 10vw); */
+    background-position: center top;
+    padding-top: 2rem;
+  }
+
+  .showcase p.rank {
+    letter-spacing: normal;
+    font-size: calc(1.2rem + 1.2vw);
+  }
+
+  .showcase p {
+    line-height: normal;
+  }
+
+  .about img {
+    float: left;
+    max-width: 25rem;
+    margin-right: 2rem;
+    margin-bottom: .5rem;
+  }
+
+  .contacts .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .contacts article {
+    padding: 1rem;
+  }
+
+  .header-slt {
+    padding-top: 4rem;
+  }
+
+  .showcase-slt,
+  .showcase-slt article {
+    padding-top: 0rem;
+  }
+
+  /* .main-slt .subheader {
+    font-size: calc();
+  } */
+
+  .main-slt p,
+  .main-slt h3 {
+    text-align: left;
+  }
+}

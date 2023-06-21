@@ -41,20 +41,24 @@ a {
 
 body {
   background: var(--color-bg-primary);
-  
+  position: relative;
+  /* overflow-x: hidden; */
+  /* height: 100vh; */
 }
 
-/* .wrapper {
+.wrapper {
   position: relative;
   overflow-x: hidden;
-} */
+}
 
-/* header,
+header,
 section,
 footer,
 footer {
   max-width: 1400px;
-} */
+  margin: 0 auto;
+  /* overflow-x: hidden; */
+}
 
 header,
 section,

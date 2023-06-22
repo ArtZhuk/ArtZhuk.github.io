@@ -1,0 +1,553 @@
+:root {
+  /* fonts */
+  --font-primary: 'Playfair Display', serif;
+
+  --font-secondary: 'Raleway', sans-serif;
+
+  /* colors */
+  --color-bg-primary: #958977;
+  --color-bg-secondary: #6C6456;
+  --color-font-primary: #fff;
+  --color-btn-primary: #343434;
+}
+
+
+/* resets */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* general styles */
+
+body {
+  background: var(--color-bg-primary);
+  position: relative;
+  /* overflow-x: hidden; */
+  /* height: 100vh; */
+}
+
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+header,
+section,
+footer,
+footer {
+  max-width: 87.5rem;
+  margin: 0 auto;
+  /* overflow-x: hidden; */
+}
+
+header,
+section,
+footer,
+footer div {
+  display: grid;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.75rem;
+  justify-content: space-evenly;
+  width: 20.187rem;
+}
+
+.nav-menu a {
+  font: 500 0.875rem/1 var(--font-primary);
+  color: var(--color-font-primary);
+  text-transform: uppercase;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.social-media a:first-child {
+  margin-right: -0.25rem;
+}
+
+.social-media .facebook-icon,
+.social-media .twitter-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.section-name {
+  margin: 0;
+  font: 600 0.875rem var(--font-secondary);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-name a {
+  color: var(--color-font-primary);
+}
+
+.btn {
+  display: inline-block;
+  width: 12.937rem;
+  height: 2.75rem;
+  padding: 0.75rem 3.75rem;
+  background-color: #fff;
+  font: 700 0.937rem var(--font-primary);
+  color: var(--color-btn-primary);
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+
+/* header */
+
+header {
+  position: relative;
+  background: bottom 3.4rem center no-repeat url(images/header-twig.svg), center / cover no-repeat url(images/header-bg-390w.jpg);
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.25rem;
+}
+
+.logo {
+  display: flex;
+  gap: 0.52rem;
+}
+
+.logo>* {
+  max-width: min-content;
+}
+
+.logo-box {
+  flex-basis: 3.8rem;
+  margin-left: 1.18rem;
+}
+
+.logo h2 {
+  margin: 0;
+  margin-top: 0.3rem;
+  font: 1.53rem/0.95 var(--font-primary);
+  color: var(--color-font-primary);
+}
+
+.nav-header .hamburger-box {
+  margin-right: 1.43rem;
+  cursor: pointer;
+}
+
+.nav-header ul {
+  display: none;
+}
+
+.social-media-header {
+  display: none;
+}
+
+.main-title {
+  margin-top: 8.59rem;
+  margin-bottom: 2.53rem;
+  text-align: center;
+  font: italic 900 3.98rem/1.05 var(--font-primary);
+  color: var(--color-font-primary);
+  letter-spacing: 0.02rem;
+}
+
+.main-title+p {
+  margin: 0 3.808rem 1.8925rem 3.439rem;
+  text-align: center;
+  font: italic 600 1.125rem/1.5 var(--font-secondary);
+  color: var(--color-font-primary);
+}
+
+header .btn {
+  margin: 0 5.718rem 11.145rem;
+  margin: 0 auto 11.145rem;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: -35%;
+  left: calc(50% - 39.125rem / 2);
+  display: block;
+  width: 39.125rem;
+
+  /* NOTE */
+  /* width: calc(629 + 1.5vw); */
+
+  aspect-ratio: 1;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+
+/* about us */
+
+.about {
+  padding-bottom: 13.437rem;
+  background: center bottom 3.023rem no-repeat url(images/about-us-bg.jpg);
+}
+
+.about .section-name {
+  margin: 3rem 9.96rem 2.625rem;
+  white-space: nowrap;
+}
+
+.about p {
+  margin: 0 1.209rem;
+  font: italic 500 1.75rem var(--font-secondary);
+  color: var(--color-font-primary);
+  text-indent: 5rem;
+}
+
+.about h4 {
+  margin-top: 4.262rem;
+  padding: 0 1.209rem;
+  font: 200 3.125rem var(--font-secondary);
+  color: var(--color-font-primary);
+  text-align: center;
+}
+
+
+/* services */
+
+.services {
+  display: grid;
+  position: relative;
+  /* overflow-x: hidden  - вызывает вертикальную полосу прокрутки самой секцииб т. е. уменьшает к.т. образом высоту секции*/
+  background: center top no-repeat url(images/services-curve.svg)
+}
+
+.services .section-name {
+  margin-top: 4.821rem;
+  margin-bottom: 2.002rem;
+}
+
+.services-content-item {
+  margin: 0 1.209rem 2.375rem;
+}
+
+.services-content-item:last-child {
+  margin-bottom: 3.584rem;
+}
+
+.services-content h2 {
+  position: relative;
+  margin-bottom: 1.25rem;
+  font: italic 500 2rem/1.5 var(--font-secondary);
+  color: var(--color-font-primary);
+}
+
+.services-content h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  width: 100px;
+  height: 0;
+  border-bottom: 1px solid var(--color-font-primary);
+}
+
+.services-content p {
+  font: 1rem/1.3 var(--font-secondary);
+  color: var(--color-font-primary);
+}
+
+
+.bg-text {
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+  z-index: -1;
+  font: italic 900 10.937rem/0.8 var(--font-primary);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(108, 100, 86, 0.5);
+  color: var(--color-bg-primary);
+  width: 100%;
+  word-wrap: break-word;
+}
+
+
+/* reservation */
+
+.reservation {
+  background: top 1.93rem center no-repeat url(images/reservation-twig.svg), center center / 102% no-repeat url(images/reservation-bg-390w.jpg);
+}
+
+.reservation .section-name {
+  margin-top: 5.45rem;
+  margin-bottom: 1.75rem;
+}
+
+.reservation h2+p {
+  margin: 0 2.119rem 1.75rem;
+  font: italic 800 2.25rem var(--font-primary);
+  color: var(--color-font-primary);
+  letter-spacing: 0.02rem;
+  text-align: center;
+}
+
+.reservation p+p {
+  margin: 0 auto 6.54rem;
+  text-align: center;
+  font: 500 1.125rem/1.2 var(--font-secondary);
+  color: var(--color-font-primary)
+}
+
+footer {
+  text-align: center;
+}
+
+.logo-footer {
+  justify-content: center;
+  margin: 2.08rem auto 3.017rem;
+}
+
+.nav-footer {
+  margin: 0 auto 3rem;
+}
+
+.social-media-footer {
+  margin-bottom: 9.69rem;
+}
+
+.designer-tag {
+  margin-bottom: 1.385rem;
+  font: 0.875rem/1.25rem var(--font-primary);
+  letter-spacing: 0.02rem;
+  color: var(--color-font-primary);
+}
+
+@media screen and (min-width: 50.625em) {
+
+  .section-name {
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+    /* writing-mode: sideways-lr; */
+  }
+
+  /* HEADER */
+  header {
+    background: bottom 0.978rem center no-repeat url(images/header-twig.svg), top center / cover url(images/header-bg-1400w.jpg);
+  }
+
+  header .logo-box {
+    margin-left: 3.71vw;
+  }
+
+  .nav-header .hamburger-box {
+    display: none;
+  }
+
+  .nav-header {
+    align-self: start;
+  }
+
+  .nav-header ul {
+    display: flex;
+  }
+
+  .social-media-header {
+    display: flex;
+    align-self: start;
+    margin-right: 1.18rem;
+  }
+
+  .main-title {
+    margin-bottom: 1.85rem;
+    font-size: calc(63.68px + (3vw * 1.012));
+  }
+
+  .transparent-outlined {
+    color: transparent;
+    -webkit-text-stroke-color: var(--color-font-primary);
+    -webkit-text-stroke-width: 1px;
+  }
+
+  .main-title+p {
+    margin-bottom: 1.416rem;
+  }
+
+  header .btn {
+    margin-bottom: 8.875rem;
+  }
+
+
+  /* ABOUT */
+
+  .about {
+    grid-template-columns: 19.42vw repeat(5, 1fr) 19.42vw;
+    grid-template-rows: auto auto;
+    padding-top: 5.5rem;
+  }
+
+  .about .section-name {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    justify-self: start;
+    margin: 2rem 0 0 3.71vw;
+
+  }
+
+  .about h2 + p {
+    grid-column: 2 / -2;
+    margin: 0;
+  }
+
+  .about h4 {
+    grid-column: 2 / -2;
+    grid-row: 2 / -1;
+  }
+
+
+  /* SEVRICES */
+
+  .services {
+    grid-template-columns: 19.42vw repeat(5, 1fr) 19.42vw;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, auto);
+    position: relative;
+    padding-top: 7.32rem;
+  }
+
+  .services .section-name {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin: 7rem 0 11.002rem 3.71vw;
+  }
+
+  .services-content {
+    grid-column: 2 / -2;
+  }
+
+  .services-content-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .services-content-item > * {
+    margin-top: 0;
+  }
+
+  .services-content-item h2 {
+    flex: 1 2 auto;
+    align-items: start;
+  }
+
+  .services-content-item p {
+    flex: 1 3 25ch;
+  }
+
+  .services .bg-text {
+    left: 0;
+    right: 0;
+  }
+
+
+  /* RESERVATION */
+
+  .reservation {
+    grid-template-columns: 24.5vw repeat(5, 1fr) 24.5vw;
+    background: top 3.56rem center no-repeat url(images/reservation-twig.svg), center top / cover no-repeat url(images/reservation-bg-1400w.jpg);
+
+  }
+
+  .reservation .section-name {
+    justify-self: start;
+    align-self: end;
+    margin: 2rem 0 0 3.71vw;
+    margin: 0 0 6.562rem 3.71vw;
+  }
+
+  
+  .reservation p {
+    grid-column: 2 / -2;
+  }
+
+  .reservation h2 + p {
+    margin-top: 15.40rem;
+    margin-bottom: 2.53rem;
+  }
+
+  .reservation p + p {
+    margin-bottom: 11.68rem;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    overflow: hidden;
+  }
+
+  footer .navbar-footer {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    margin-top: 2.507rem;
+    margin-bottom: 9.746rem;
+    padding: 0 2.56vw;
+  }
+
+  footer .navbar-footer > * {
+    margin: 0;
+  }
+
+  footer .logo-footer {
+    align-self: start;
+    justify-self: start;
+    grid-column: 2 / 3;
+  }
+
+  .nav-footer {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: start;
+    align-self: center;
+    margin: 0;
+  }
+
+  .social-media-footer {
+    justify-self: end;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .designer-tag {
+    margin-bottom: 1.37rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .services-content h2::after {
+    top: 0.37rem;
+    right: 3.2rem;
+  }
+}

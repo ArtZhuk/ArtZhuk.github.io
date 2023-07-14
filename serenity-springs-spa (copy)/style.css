@@ -8,6 +8,7 @@
   --color-bg-primary: #958977;
   --color-bg-secondary: #6C6456;
   --color-font-primary: #fff;
+  --color-font-hover: #7D5757;
   --color-btn-primary: #343434;
 }
 
@@ -34,6 +35,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-font-hover);
 }
 
 
@@ -78,6 +83,11 @@ footer div {
   font: 500 0.875rem/1 var(--font-primary);
   color: var(--color-font-primary);
   text-transform: uppercase;
+  transition: all .2s ease-in-out;
+}
+
+.nav-menu a:hover {
+  color: var(--color-font-hover);
 }
 
 .social-media {
@@ -85,6 +95,15 @@ footer div {
   justify-content: center;
   align-items: center;
   gap: 0.875rem;
+  gap: 2rem;
+}
+
+.social-media a {
+  color: var(--color-font-primary);
+}
+
+.social-media a:hover {
+  color: var(--color-font-hover);
 }
 
 .social-media a:first-child {
@@ -106,6 +125,11 @@ footer div {
 
 .section-name a {
   color: var(--color-font-primary);
+  transition: all .2s ease-in-out;
+}
+
+.section-name a:hover {
+  color: var(--color-font-hover);
 }
 
 .btn {
@@ -118,6 +142,13 @@ footer div {
   color: var(--color-btn-primary);
   text-transform: uppercase;
   border-radius: 3px;
+  transition: all .2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--color-font-hover);
+  color: #000;
+  box-shadow: 0 0 5px #3e3e3e86;
 }
 
 .no-wrap {
@@ -160,16 +191,97 @@ header {
   color: var(--color-font-primary);
 }
 
+/* Burger menu */
 .nav-header .hamburger-box {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  height: 1rem;
+  width: 1.875rem;
   margin-right: 1.43rem;
   cursor: pointer;
 }
 
-.nav-header ul {
+.nav-header .burger {
+  position: relative;
+  display: inline-block;
+  height: 2px;
+  width: 1.875rem;
+  background: var(--color-font-primary);
+  border-radius: 1px;
+  transition: all .3s ease-in-out;
+}
+
+.nav-header .burger::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 1.875rem;
+  height: inherit;
+  background: var(--color-font-primary);
+  border-radius: inherit;
+  transition: all .3s ease-in-out;
+
+}
+
+.nav-header .burger::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  width: 1.375rem;
+  height: inherit;
+  background: var(--color-font-primary);
+  border-radius: inherit;
+  transition: all .3s ease-in-out;
+
+}
+
+.hamburger-box.open .burger {
+  position: fixed;
+  right: 1.5rem;
+  top: 4.3rem;
+  background: transparent;
+}
+
+.hamburger-box.open .burger::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-box.open .burger::after {
+  width: 1.875rem;
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-header ul.nav-menu-header {
+  position: relative;
   display: none;
 }
 
+.nav-header ul.nav-menu-header.open {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+  width: 40%;
+  background: #000;
+  text-align: center;
+  opacity: .85;
+  transition: all .1s ease-in;
+}
+
+.nav-header ul.nav-menu-header.open a {
+  font-size: 1.2rem;
+}
+
 .social-media-header {
+  position: relative;
   display: none;
 }
 
@@ -307,14 +419,14 @@ header::before {
   margin-bottom: 1.75rem;
 }
 
-.reservation h2 + p {
+.reservation h2+p {
   margin: 0 2.119rem 1.75rem;
   font: italic 800 2.25rem var(--font-primary);
   letter-spacing: 0.02rem;
   text-align: center;
 }
 
-.reservation p + p {
+.reservation p+p {
   margin: 0 auto 6.54rem;
   text-align: center;
   font: 500 1.125rem/1.2 var(--font-secondary);
@@ -388,7 +500,7 @@ footer {
     align-self: start;
   }
 
-  .nav-header ul {
+  .nav-header ul.nav-menu-header {
     display: flex;
   }
 
@@ -409,7 +521,7 @@ footer {
     -webkit-text-stroke-width: 1px;
   }
 
-  .main-title + p {
+  .main-title+p {
     margin-bottom: 1.416rem;
   }
 
@@ -478,7 +590,7 @@ footer {
     align-items: start;
   }
 
-  .services-content-item > * {
+  .services-content-item>* {
     margin-top: 0;
   }
 
@@ -502,7 +614,7 @@ footer {
   .reservation {
     grid-template-columns: 24.5vw repeat(5, 1fr) 24.5vw;
     background: top 3.56rem center no-repeat url(images/reservation-twig.svg), center top / cover no-repeat url(images/reservation-bg-1400w.jpg);
-    font-family: var(--font-secondary); 
+    font-family: var(--font-secondary);
   }
 
   .reservation .section-name {
@@ -516,13 +628,13 @@ footer {
     grid-column: 2 / -2;
   }
 
-  .reservation h2 + p {
+  .reservation h2+p {
     margin-top: 15.40rem;
     margin-bottom: 2.53rem;
     font-weight: 800;
   }
 
-  .reservation p + p {
+  .reservation p+p {
     margin-bottom: 11.68rem;
     font-weight: 500;
   }
@@ -547,7 +659,7 @@ footer {
     padding: 0 2.56vw;
   }
 
-  footer .navbar-footer > * {
+  footer .navbar-footer>* {
     margin: 0;
   }
 

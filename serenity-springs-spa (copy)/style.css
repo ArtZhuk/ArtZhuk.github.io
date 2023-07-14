@@ -100,6 +100,7 @@ footer div {
 
 .social-media a {
   color: var(--color-font-primary);
+  transition: all .2s ease-in-out;
 }
 
 .social-media a:hover {

@@ -51,9 +51,9 @@
   @include util.menu-animation;
   position: absolute;
 
-  height: 110dvh;
+  height: 110vh;
   inset: 0;
-  transform: translateX(100vw);
+  transform: translateY(-120vh);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -116,8 +116,9 @@
   }
 
   &.expanded {
-    transform: translateX(0);
-    height: 110dvh;
+    transform: translateY(0);
+    height: 110vh;
+    inset: 0;
   }
 }
 

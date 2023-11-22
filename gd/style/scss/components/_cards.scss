@@ -2,6 +2,10 @@
 @use '../utilities' as util; 
 
 // Achievment card
+*:has( > .achievment-card) {
+  isolation: isolate;
+}
+
 .achievment-card {
   display: inline-block;
   position: relative;

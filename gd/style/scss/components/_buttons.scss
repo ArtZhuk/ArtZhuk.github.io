@@ -1,0 +1,55 @@
+@use '../abstracts'as abs;
+@use '../utilities' as util;
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 1.5rem;
+  font-weight: abs.$fw-bold;
+  font-size: 1rem;
+  color: abs.$color-light-primary;
+  background-color: abs.$color-accent;
+
+  @include util.media-lg {
+    padding-block: 1rem;
+    font-size: 1.125rem;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: abs.$color-dark-secondary;
+  }
+
+  &--secondary {
+
+    &::before {
+      content: url('../../../assets/images/PencilAlt.svg');
+      position: relative;
+      top: .12rem;
+      margin-right: .625rem;
+    }
+  }
+}
+
+.store-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .875rem;
+  width: 19.375rem;
+  padding-block: .75rem;
+  padding-left: 2rem;
+  color: abs.$color-light-primary;
+  font-size: 1.5rem;
+  line-height: 2;
+  background-color: abs.$color-dark-background;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: abs.$color-accent;
+  }
+
+  @include util.media-md {
+    padding-block: 1.25rem;
+  }
+}

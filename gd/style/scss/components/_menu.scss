@@ -1,0 +1,246 @@
+@use '../abstracts'as abs;
+@use '../utilities'as util;
+
+// Nav menu
+.nav-burger {
+  @include util.animation;
+  position: relative;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @include util.media-md {
+    display: none;
+  }
+
+  &__bar {
+    @include util.animation;
+    height: 0.3125rem;
+    width: 2rem;
+    background-color: abs.$color-dark-secondary;
+    border-radius: 8px;
+  }
+
+  &[aria-expanded='true'] {
+    transform: rotate(45deg);
+
+
+    
+  }
+  &[aria-expanded='true'] &__bar {
+    background-color: abs.$color-light-primary;
+
+    &:first-child {
+      transform-origin: 50% 50%;
+      transform:
+        rotate(-90deg)
+        translate(-7px, 0);
+    }
+
+    &:last-child {
+      transform-origin: 50% 50%;
+      transform:
+        translate(0, -5px);
+    }
+  }
+}
+
+// Nav-menu
+.nav-menu {
+  @include util.animation;
+  @include util.menu-animation;
+  position: absolute;
+
+  height: 110vh;
+  inset: 0;
+  transform: translateY(-120vh);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: start;
+  align-items: center;
+  padding-top: 18rem;
+  overflow: hidden;
+  background-color: abs.$color-dark-background;
+
+  @include util.media-md {
+    position: relative;
+    flex-direction: row;
+    gap: 2.625rem;
+    padding-block: 1rem;
+    transform: translate(0);
+    background-color: transparent;
+    height: 100% !important;
+  }
+
+  &.no-animation {
+    @include util.block-animation;
+  }
+
+  &__link {
+    color: abs.$color-light-primary;
+    font-weight: abs.$fw-regular;
+    font-size: 1.5rem;
+
+    &:hover,
+    &:focus {
+      color: abs.$color-accent;
+    }
+
+    @include util.media-md {
+      font-size: 1rem;
+      font-weight: abs.$fw-bold;
+    }
+
+    &--enrol {
+      padding: 0.75rem 2rem;
+      border-radius: 1.5rem;
+      font-weight: abs.$fw-bold;
+      font-size: 1rem;
+      background-color: abs.$color-accent;
+
+      &:hover,
+      &:focus {
+        color: abs.$color-dark-secondary;
+      }
+
+      @include util.media-md {
+        background-color: abs.$color-dark-secondary;
+
+        &:hover,
+        &:focus {
+          background-color: abs.$color-accent;
+          color: abs.$color-light-primary;
+        }
+      }
+    }
+  }
+
+  &.expanded {
+    transform: translateY(0);
+    height: 110vh;
+    inset: 0;
+  }
+}
+
+
+// Footer menu
+.links {
+  display: grid;
+  row-gap: 2.5rem;
+
+  @include util.media-md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__list-block:last-child {
+    @include util.media-md {
+      grid-column: 1 / 3;
+    }
+  }
+
+  @include util.media-lg {
+    grid-template-columns: 1fr 1fr 2fr;
+    row-gap: 0;
+  }
+
+  &__list-block:last-child {
+    @include util.media-lg {
+      grid-column: 3 / 4;
+    }
+  }
+
+  &__list-caption {
+    margin-bottom: .875rem;
+    text-align: center;
+    color: abs.$color-accent;
+    font-size: 1.125rem;
+    font-weight: abs.$fw-bold;
+    line-height: 2;
+
+    @include util.media-md {
+      text-align: left;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+
+    @include util.media-md {
+      padding-left: 1.5rem;
+      align-items: start;
+    }
+  }
+
+  &__link {
+    color: abs.$color-light-primary;
+    line-height: 2;
+
+    &:hover,
+    &:focus {
+      color: abs.$color-accent;
+    }
+  }
+
+  &__item--social {
+    display: flex;
+    gap: 1.75rem;
+  }
+
+  &__link--social:hover img,
+  &__link--social:focus img {
+    transform: scale(1.2);
+  }
+
+  &__item--subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 32.5625rem;
+
+    @include util.media-md {
+      position: relative;
+      display: block;
+    }
+  }
+
+  &__submit-btn {
+    @include util.media-md {
+      position: absolute;
+      top: 4px;
+      right: 6px;
+    }
+
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: .25rem 0 .25rem 1.875rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    line-height: 2;
+  }
+
+  &__submit-btn {
+    padding-inline: 1.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 2;
+    vertical-align: middle;
+    color: abs.$color-light-primary;
+    background-color: abs.$color-dark-secondary;
+
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: abs.$color-accent;
+    }
+  }
+}

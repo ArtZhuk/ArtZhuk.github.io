@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Game development courses website. Learn game dev in funny way, and get a dream job">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Raleway:wght@400;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style/css/main.css">
+  <link rel="shortcut icon" href="assets/images/gd-favicon.png" type="image/x-icon">
+  <script defer src="script/script.js"></script>
+  <title>GD courses</title>
+</head>
+
+<body>
+    <nav class="nav">
+      <h2 class="hero__logo">GD.</h2>
+      <ul class="nav-menu nav-menu" id="nav-menu">
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">About</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">Services</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">Our Work</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link nav-menu__link--enrol">Enrol Now</a>
+        </li>
+      </ul>
+      <button class="nav-burger" aria-label="Burger menu" aria-haspopup="true" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-burger__bar"></span>
+        <span class="nav-burger__bar"></span>
+      </button>
+    </nav>
+  
+  <section class="hero">
+    
+    <div class="hero__container">
+      <header class="hero__header">
+        <h1 class="hero__main-heading heading heading--main">Learn the art of<br/> Game Dev</h1>
+        <p class="hero__lead lead lead--secondary">This is a comprehensive course on Game Development. You will learn
+          everything from
+          generating an idea to publishing your games to different platforms.</p>
+        <a href="#" class="button button--secondary">Enrol Now</a>
+      </header>
+      <div class="hero__achievments">
+        <div class="achievment-card achievment-card--students">
+          <span class="numbers">32K</span><br>Students Enrolled
+        </div>
+        <div class="achievment-card achievment-card--rating">
+          <span class="numbers">4.7</span><br>Overall &nbsp; Rating
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <header class="testimonials__header">
+      <h2 class="testimonials__heading heading heading--primary">What our students say</h2>
+      <p class="lead lead--primary">All students get access to all the videos and also the source code of the projects.
+        You will also
+        have access to a private Discord channel where you can discuss your doubts.</p>
+    </header>
+    <div class="testimonials__cards">
+
+      <div class="testimonial-card">
+        <header class="testimonial-card__header testimonial-card__header--primary">
+          This is a great course. It helped me a lot. Thank you :)
+        </header>
+        <article class="testimonial-card__body">
+          <img srcset="assets/images/jane-rounded-portrait-100w.png 100w,
+          assets/images/jane-rounded-portrait-120w.png 120w" sizes="(max-width: 52.125em) 100px , 120px"
+            src="assets/images/jane-rounded-portrait-100w.png" alt="Photo portrait">
+          <p class="testimonial-card__name">Jane Cooper</p>
+          <p class="testimonial-card__job">Developer, Sony</p>
+        </article>
+      </div>
+      <div class="testimonial-card">
+        <header class="testimonial-card__header testimonial-card__header--secondary">
+          Amazing Work! Well done!
+        </header>
+        <article class="testimonial-card__body">
+          <img srcset="assets/images/john-rounded-portrait-100w.png 100w,
+          assets/images/john-rounded-portrait-120w.png 120w" sizes="(max-width: 52.125em) 100px , 120px"
+            src="assets/images/john-rounded-portrait-120w.png" alt="Photo portrait">
+          <p class="testimonial-card__name">Jacob Jones</p>
+          <p class="testimonial-card__job">Designer, Facebook</p>
+        </article>
+      </div>
+    </div>
+    <a href="#" class="button button--primary">Learn More</a>
+  </section>
+
+  <section class="courses">
+    <header class="courses__header">
+      <h2 class="heading heading--secondary">Our Courses</h2>
+    </header>
+    <!-- Cards block-->
+    <div class="courses__cards">
+      <!-- Dolls -->
+      <div class="course-card">
+        <header class="course-card__header">
+            <picture class="course-card__image">
+              <source srcset="assets/images/puppets-365w.png" media="(max-width: 52.125em)">
+              <source srcset="assets/images/puppets-584w.png" media="(max-width: 87.5em)">
+              <source srcset="assets/images/puppets-462w.png">
+              <img src="assets/images/puppets-462w.png" alt="Dolls of waving Mario bros and the King of Koopas standing">
+            </picture>
+        </header>
+        <article class="course-card__body">
+          <h3 class="course-card__heading">Game Design Essentials</h3>
+          <p class="course-card__duration">8 HRS</p>
+        </article>
+      </div>
+      <!-- Console -->
+
+
+        <div class="course-card">
+          <header class="course-card__header">
+            <picture class="course-card__image">
+              <source media="(max-width: 52.125em)" srcset="assets/images/console-365w.png">
+              <source media="(max-width: 87.5em)" srcset="assets/images/console-584w.png">
+              <source srcset="assets/images/console-462w.png">
+              <img src="assets/images/console-462w.png" alt="Two pairs of hands holding gamepads on a tv set on a background">
+            </picture>
+          </header>
+          <article class="course-card__body">
+            <h3 class="course-card__heading">Unity Game Engine Fundamentals</h3>
+            <p class="course-card__duration">8 HRS</p>
+          </article>
+        </div>
+        <a href="#" class="button button--primary">All Courses</a>
+    </div>
+  </section>
+
+<!-- App -->
+  <section class="app">
+    <header class="app__header">
+      <h2 class="app__heading heading heading--primary">Get our App</h2>
+      <p class="app__lead lead lead--primary">You can use our App for better experience on smartphones</p>
+    </header>
+    <div class="app__links">
+      <a class="app__link store-link" aria-label="Get our app for iOS">
+        <img src="assets/images/app-store.svg" alt="" >App Store</a>
+      <a class="app__link store-link" aria-label="Get our app for Android">
+        <img src="assets/images/google-play.svg" alt="">Google Play</a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__menu links">
+      <figure class="links__list-block">
+        <figcaption class="links__list-caption">Quick Links</figcaption>
+        <ul class="links__list">
+          <li class="links__item">
+            <a class="links__link" href="#">About Us</a>
+          </li>
+          <li class="links__item">
+            <a class="links__link" href="#">Contact Us</a>
+          </li>
+          <li class="links__item">
+            <a class="links__link" href="#">Privacy Policy</a>
+          </li>
+          <li class="links__item">
+            <a class="links__link" href="#">Terms &amp; Conditions</a>
+          </li>
+        </ul>
+      </figure>
+      <figure class="links__list-block">
+        <figcaption class="links__list-caption">Course</figcaption>
+        <ul class="links__list">
+          <li class="links__item">
+            <a class="links__link" href="#">Log In</a>
+          </li>
+          <li class="links__item">
+            <a class="links__link" href="#">Download</a>
+          </li>
+          <li class="links__item">
+            <a class="links__link" href="#">All Courses</a>
+          </li>
+        </ul>
+      </figure>
+      <figure class="links__list-block">
+        <figcaption class="links__list-caption">Contact Us</figcaption>
+        <ul class="links__list">
+          <li class="links__item">
+            <a class="links__link" href="mailto:contact@email.com">contact@email.com</a>
+          </li>
+          <li class="links__item links__item--social">
+            <a class="links__link links__link--social" href="#" aria-label="Our twitter-X">
+              <img src="assets/images/icons8-twitterx-24.svg" alt="">
+            </a>
+            <a class="links__link links__link--social" href="#" aria-label="Our Vk">
+              <img src="assets/images/icons8-vk-com-24.svg" alt="">
+            </a>
+          </li>
+          <li class="links__item links__item--subscribe">
+            <input class="links__input" type="email" name="email" id="email" placeholder="Enter Email">
+            <button class="links__submit-btn" type="submit">Subscribe</button>
+          </li>
+        </ul>
+      </figure>
+    </div>
+    <p class="footer__copyright">This website is designed by GTCoding © 2021</p>
+  </footer>
+</body>
+
+</html>

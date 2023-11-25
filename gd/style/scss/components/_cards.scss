@@ -38,10 +38,13 @@
   &--rating {
 
     .numbers::after {
-      content: url('../../../assets/images/star.svg');
+      content: '';
+      background-image: url('../../../assets/images/star.svg');
       position: absolute;
       left: 5.75rem;
       top: .375rem;
+      width: 40px;
+      height: 40px;
       transform: scale(.9);
 
       @include util.media-md {

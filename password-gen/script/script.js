@@ -128,12 +128,6 @@ function shuffle(arr) {
 function printPassword() {
   display.textContent = '';
   let i = 0;
-  // for (let i = 0; i < password.length; i++) {
-
-  //   setTimeout(function () {
-  //     display.innerHTML += password[i]
-  //   }, 100*i );
-  // }
   return function printing(passcode) {
     if (i < passcode.length) {
       display.textContent += passcode[i]

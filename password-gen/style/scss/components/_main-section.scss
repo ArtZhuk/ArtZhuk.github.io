@@ -1,0 +1,24 @@
+@use '../abstracts'as abs;
+@use '../utilities/' as utl;
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(25.375rem, 41.25rem);
+  justify-content: center;
+  row-gap: 1.5rem;
+  justify-items: center;
+  @include utl.straight-angled-border;
+  padding-block: 1.375rem;
+  color: abs.$color-font-primary;
+  background-color: abs.$color-dark-bace-70;
+  font-family: abs.$font-primary;
+
+  &__gen-btn {
+    @include utl.full-width;
+    max-width: 32.9375rem;
+  }
+
+  @include utl.media-lg {
+    padding-block: 1.5rem 6rem;
+  }
+}

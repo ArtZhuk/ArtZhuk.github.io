@@ -1,0 +1,161 @@
+@use '../abstracts'as abs;
+@use '../utilities/'as utl;
+
+$btn-border-width-wide: .3125rem;
+$btn-border-width-narrow: .3125rem;
+
+.btn {
+  position: relative;
+  isolation: isolate;
+  color: abs.$color-font-primary;
+  background-color: abs.$color-dark-bace-70;
+  font-family: abs.$font-primary;
+
+  &:hover::after,
+  &:hover::before {
+    @include utl.transition-eio;
+  }
+
+  &:hover::after,
+  &:active::after {
+    background-color: abs.$color-font-secondary-30;
+  }
+}
+
+.btn--long {
+  z-index: 1;
+  font-size: 1.5rem;
+  font-weight: abs.$fw-semi;
+  padding: 1rem 2.625rem 1rem 3.75rem;
+  clip-path: polygon(0 0%,
+      93% 0,
+      100% 55%,
+      100% 100%,
+      7% 100%,
+      0% 45%);
+  border-radius: 5px;
+  text-align: right;
+  line-height: 1.7;
+
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 5px;
+  }
+
+  &::before {
+    z-index: -2;
+    background-color: abs.$color-font-secondary-30;
+  }
+
+  &::after {
+    z-index: -1;
+    background-color: adjust-color($color: abs.$color-dark-bace, $alpha: .8);
+    clip-path: polygon(.3125rem .3125rem,
+        calc(93% - .3125rem + .3125rem * .5) .3125rem,
+        calc(100% - .3125rem) calc(55% + .3125rem * .5),
+        calc(100% - .3125rem) calc(100% - .3125rem),
+        calc(7% + .3125rem - .3125rem * .5) calc(100% - .3125rem),
+        .3125rem calc(45% - .3125rem + .3125rem * .5));
+  }
+}
+
+.btn--gen-pswd {
+  @include utl.full-width;
+}
+
+.btn--short {
+  font-size: 1rem;
+  clip-path: polygon(0 0,
+      80% 0,
+      100% 50%,
+      100% 100%,
+      20% 100%,
+      20% 50%);
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 5px;
+  }
+
+  &::before {
+    z-index: -2;
+    background-color: abs.$color-font-secondary-30;
+  }
+
+  &::after {
+    z-index: -1;
+    background-color: adjust-color($color: abs.$color-dark-bace, $alpha: .8);
+    clip-path: polygon(
+        /*Top left */
+        calc($btn-border-width-wide + $btn-border-width-wide *.5) $btn-border-width-wide,
+        /*Top right */
+        calc(80% - $btn-border-width-wide + $btn-border-width-wide *.5) $btn-border-width-wide,
+        /* Right */
+        calc(100% - $btn-border-width-wide) 50%,
+        /* Bottom right */
+        calc(100% - $btn-border-width-wide) calc(100% - $btn-border-width-wide),
+        /* Bottom left */
+        calc(20% + $btn-border-width-wide) calc(100% - $btn-border-width-wide),
+        /* Left */
+        calc(20% + $btn-border-width-wide) 50%)
+  }
+}
+
+.btn--copy-clb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.2rem;
+  border-radius: 5px;
+
+  img {
+    margin-left: 20%;
+    width: 70%;
+    max-width: 2.75rem;
+    height: auto;
+  }
+
+  @include utl.media-md {
+    width: 7.8125rem;
+  }
+}
+
+.btn--small {
+  width: 4rem;
+  height: 2.25rem;
+  padding: 0.3125rem 1rem;
+  font-weight: abs.$fw-semi;
+  border-radius: 3px;
+
+  &::before,
+  &::after {
+    border-radius: inherit;
+  }
+
+  &::after {
+    clip-path: polygon(
+        /*Top left */
+        calc($btn-border-width-narrow - $btn-border-width-narrow * .1) $btn-border-width-narrow * .5,
+        /*Top right */
+        calc(80% - $btn-border-width-narrow + $btn-border-width-narrow *.8) $btn-border-width-narrow * .5,
+        /* Right */
+        calc(100% - $btn-border-width-narrow * .5) 50%,
+        /* Bottom right */
+        calc(100% - $btn-border-width-narrow* .5) calc(100% - $btn-border-width-narrow * .5),
+        /* Bottom left */
+        calc(20% + $btn-border-width-narrow*.5) calc(100% - $btn-border-width-narrow * .5),
+        /* Left */
+        calc(20% + $btn-border-width-narrow * .5) 50%)
+  }
+}
+
+.btn--checkbox[aria-checked="true"]::after {
+  background-color: abs.$color-font-secondary-70;
+}

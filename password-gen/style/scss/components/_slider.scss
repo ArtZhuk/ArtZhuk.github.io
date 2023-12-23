@@ -1,0 +1,49 @@
+@use '../abstracts'as abs;
+@use '../utilities/' as utl;
+
+.range-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.375rem;
+  padding-inline: 2px;
+  width: 100%;
+  max-width: 34.375rem;
+
+  &__input {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 0.3125rem;
+    background-color: abs.$color-scroll-primary;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: .4375rem;
+      width: 20%;
+      background-color: abs.$color-scroll-accent;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      height: .4375rem;
+      width: 20%;
+      background-color: abs.$color-scroll-accent;
+      outline: none;
+      border-radius: 0;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__length-display {
+    font-size: 1.5rem;
+    font-weight: abs.$fw-semi;
+    width: 1.875rem;
+  }
+
+  @include utl.media-md {
+    justify-self: end;
+  }
+}

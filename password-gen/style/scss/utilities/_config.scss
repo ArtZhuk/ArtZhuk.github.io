@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  @extend %no-outline;
+}
+
+button {
+  @extend %no-outline;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+%no-outline {
+  outline: none;
+}

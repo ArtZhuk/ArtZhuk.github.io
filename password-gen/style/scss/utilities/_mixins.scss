@@ -1,0 +1,13 @@
+@use '../abstracts'as abs;
+
+@mixin full-width {
+  width: 100%;
+}
+
+@mixin transition-eio {
+  transition: all .2s ease-in-out;
+}
+
+@mixin straight-angled-border {
+  border: 1px solid abs.$color-light-bace;
+}

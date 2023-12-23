@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Chakra+Petch:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style/css/style.css">
+  <script defer src="script/script.js"></script>
+  <title>Random Password generator</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__main-heading">Random Password Generator</h1>
+  </header>
+
+  <main class="main">
+    <div class="main__display-bar">
+      <p class="main__password-display">*a/3Lo0+.aS1</p>
+      <button class="btn btn--copy-clb btn--short" title="Copy to clipboard">
+        <img src="assets/img/copy-to-clipboard.svg" alt="" class="btn__img">
+      </button>
+
+      <!-- <div class="copy-tag">
+        Copied
+      </div> -->
+
+    </div>
+
+    <div class="main__gen-btn">
+      <button class="btn btn--gen-pswd btn--long">Generate Password
+      </button>
+    </div>
+
+    <div class="main__range-bar range-bar">
+      <input type="range" min="4" max="50" step="1" value="12" class="range-bar__input">
+      <p class="range-bar__length-display"></p>
+    </div>
+
+    <div class="main__checkboxes">
+
+      <div class="main__checkboxes-letters main__checkboxes-block">
+        <div class="main__uppercase checkbox">
+          <button id="uppercase" class="btn btn--small btn--checkbox btn--short" role="checkbox" aria-checked="true">On</button><label for="uppercase" class="checkbox-title checkbox__label">Uppercase letters</label>
+        </div>
+        <div class="main__lowercase checkbox">
+          <button id="lowercase" class="btn btn--small btn--checkbox btn--short" role="checkbox" aria-checked="false">Off</button>
+          <label for="lowercase" class="checkbox-title checkbox__label">Lowercase letters</label>
+        </div>
+      </div>
+
+      <div class="main__checkboxes-symbols main__checkboxes-block">
+        <div class="main__numbers checkbox">
+          <button id="numbers" class="btn btn--small btn--checkbox btn--short" role="checkbox" aria-checked="false">Off</button>
+          <label for="numbers" class="checkbox-title checkbox__label">Numbers</label>
+        </div>
+        <div class="main__symbols checkbox">
+          <button id="symbols" class="btn btn--small btn--checkbox btn--short" role="checkbox" aria-checked="false">Off</button>
+          <label for="symbols" class="checkbox-title checkbox__label">Symbols</label>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  
+</body>
+
+</html>

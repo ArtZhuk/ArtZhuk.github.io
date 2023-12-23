@@ -1,0 +1,313 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+*:focus,
+*:active, button {
+  outline: none;
+}
+
+.header {
+  border: 1px solid #ccaa33;
+  padding: 2.1875rem 1rem;
+  text-align: center;
+  font-family: "Bruno Ace SC", monospace;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+}
+.header__main-heading {
+  font-size: 2.625rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: #f8e08a;
+  text-shadow: 1px 1px 0 #ffffff, -1px 1px 0 #ffffff, 1px -1px 0 #ffffff, -1px -1px 0 #ffffff;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(25.375rem, 41.25rem);
+  justify-content: center;
+  row-gap: 1.5rem;
+  justify-items: center;
+  border: 1px solid #ccaa33;
+  padding-block: 1.375rem;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  font-family: "Chakra Petch", sans-serif;
+}
+.main__gen-btn {
+  width: 100%;
+  max-width: 32.9375rem;
+}
+@media screen and (min-width: 53.125em) {
+  .main {
+    padding-block: 1.5rem 6rem;
+  }
+}
+
+.btn {
+  position: relative;
+  isolation: isolate;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  font-family: "Chakra Petch", sans-serif;
+}
+.btn:hover::after, .btn:hover::before {
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover::after, .btn:active::after {
+  background-color: rgba(248, 224, 138, 0.3019607843);
+}
+
+.btn--long, .main__password-display {
+  z-index: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem 2.625rem 1rem 3.75rem;
+  clip-path: polygon(0 0%, 93% 0, 100% 55%, 100% 100%, 7% 100%, 0% 45%);
+  border-radius: 5px;
+  text-align: right;
+  line-height: 1.7;
+}
+.btn--long::after, .main__password-display::after, .btn--long::before, .main__password-display::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 5px;
+}
+.btn--long::before, .main__password-display::before {
+  z-index: -2;
+  background-color: rgba(248, 224, 138, 0.3019607843);
+}
+.btn--long::after, .main__password-display::after {
+  z-index: -1;
+  background-color: black;
+  clip-path: polygon(0.3125rem 0.3125rem, calc(93% - 0.3125rem + 0.15625rem) 0.3125rem, calc(100% - 0.3125rem) calc(55% + 0.15625rem), calc(100% - 0.3125rem) calc(100% - 0.3125rem), calc(7% + 0.3125rem - 0.15625rem) calc(100% - 0.3125rem), 0.3125rem calc(45% - 0.3125rem + 0.15625rem));
+}
+
+.btn--gen-pswd {
+  width: 100%;
+}
+
+.btn--short {
+  font-size: 1rem;
+  clip-path: polygon(0 0, 80% 0, 100% 50%, 100% 100%, 20% 100%, 20% 50%);
+}
+.btn--short::after, .btn--short::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 5px;
+}
+.btn--short::before {
+  z-index: -2;
+  background-color: rgba(248, 224, 138, 0.3019607843);
+}
+.btn--short::after {
+  z-index: -1;
+  background-color: black;
+  clip-path: polygon(0.46875rem 0.3125rem, calc(80% - 0.3125rem + 0.15625rem) 0.3125rem, calc(100% - 0.3125rem) 50%, calc(100% - 0.3125rem) calc(100% - 0.3125rem), calc(20% + 0.3125rem) calc(100% - 0.3125rem), calc(20% + 0.3125rem) 50%);
+}
+
+.btn--copy-clb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.2rem;
+  border-radius: 5px;
+}
+.btn--copy-clb img {
+  margin-left: 20%;
+  width: 70%;
+  max-width: 2.75rem;
+  height: auto;
+}
+@media screen and (min-width: 41.25em) {
+  .btn--copy-clb {
+    width: 7.8125rem;
+  }
+}
+
+.btn--small {
+  width: 4rem;
+  height: 2.25rem;
+  padding: 0.3125rem 1rem;
+  font-weight: 600;
+  border-radius: 3px;
+}
+.btn--small::before, .btn--small::after {
+  border-radius: inherit;
+}
+.btn--small::after {
+  clip-path: polygon(0.28125rem 0.15625rem, calc(80% - 0.3125rem + 0.25rem) 0.15625rem, calc(100% - 0.15625rem) 50%, calc(100% - 0.15625rem) calc(100% - 0.15625rem), calc(20% + 0.15625rem) calc(100% - 0.15625rem), calc(20% + 0.15625rem) 50%);
+}
+
+.btn--checkbox[aria-checked=true]::after {
+  background-color: rgba(248, 224, 138, 0.7019607843);
+}
+
+.range-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.375rem;
+  padding-inline: 2px;
+  width: 100%;
+  max-width: 34.375rem;
+}
+.range-bar__input {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 0.3125rem;
+  background-color: #5E4900;
+}
+.range-bar__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 0.4375rem;
+  width: 20%;
+  background-color: #ECB800;
+  cursor: pointer;
+}
+.range-bar__input::-moz-range-thumb {
+  height: 0.4375rem;
+  width: 20%;
+  background-color: #ECB800;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+.range-bar__length-display {
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 1.875rem;
+}
+@media screen and (min-width: 41.25em) {
+  .range-bar {
+    justify-self: end;
+  }
+}
+
+.main__display-bar {
+  position: relative;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main__password-display {
+  position: relative;
+  flex-grow: 1;
+  max-width: 32.9375rem;
+  text-overflow: clip;
+}
+.main__password-display::after, .main__password-display::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 5px;
+}
+.main__password-display::before {
+  z-index: -2;
+  background-color: rgba(248, 224, 138, 0.3019607843);
+}
+.main__password-display::after {
+  z-index: -1;
+  background-color: black;
+  clip-path: polygon(0.3125rem 0.3125rem, calc(93% - 0.3125rem + 0.15625rem) 0.3125rem, calc(100% - 0.3125rem) calc(55% + 0.15625rem), calc(100% - 0.3125rem) calc(100% - 0.3125rem), calc(7% + 0.3125rem - 0.15625rem) calc(100% - 0.3125rem), 0.3125rem calc(45% - 0.3125rem + 0.15625rem));
+}
+.main__password-display button {
+  flex-grow: 2;
+}
+
+.main__checkboxes {
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 0.3125rem;
+}
+.main__checkboxes-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.main__checkboxes .checkbox {
+  display: flex;
+}
+.main__checkboxes .checkbox__label {
+  font-weight: 600;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 41.25em) {
+  .main__checkboxes {
+    flex-direction: row;
+    justify-self: end;
+    gap: 5.5rem;
+  }
+  .main__checkboxes-block {
+    gap: 1.875rem;
+  }
+  .main__checkboxes-letters {
+    flex: 1 0;
+    flex-basis: 17.375rem;
+  }
+  .main__checkboxes-symbols {
+    flex: 1 0;
+    flex-basis: 11.875rem;
+  }
+  .main__checkboxes .checkbox:last-child {
+    padding-left: 2rem;
+  }
+}
+
+.copy-tag {
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  top: 100%;
+  display: grid;
+  place-content: center;
+  width: 6.5rem;
+  height: 2.25rem;
+  border: 1px solid #ccaa33;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+body {
+  display: grid;
+  grid-template-rows: min-content min-content auto;
+  grid-template-columns: minmax(26.25rem, 54.875rem);
+  row-gap: 2.75rem;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 1.125rem;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(135deg, transparent, transparent 374px, #ccaa33 374px, #ccaa33 604px, transparent 604px), conic-gradient(from -18deg at 892px 256px, #ccaa33, #ccaa33 43deg, transparent 43deg), linear-gradient(180deg, transparent, transparent 950px, #ccaa33 950px), conic-gradient(from 45deg at 1310px 0, #ccaa33, #ccaa33 59deg, transparent 59deg), conic-gradient(from 135deg at 2200px 250px, #000000, #000000 93deg, transparent 93deg), linear-gradient(138deg, transparent, transparent 1450px, #ccaa33 1450px), conic-gradient(from 100deg at 1040px 555px, #000000, #000000 60deg, transparent 60deg), conic-gradient(from 100deg at 936px 481px, #ccaa33, #ccaa33 60deg, transparent 60deg);
+  background-size: cover, cover, cover, cover, cover, cover;
+  background-size: cover;
+  background-position: 50% 0;
+}
+@media screen and (min-width: 53.125em) {
+  body {
+    row-gap: 10.375rem;
+    padding-top: 10.125rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

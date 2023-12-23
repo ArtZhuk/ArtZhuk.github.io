@@ -1,0 +1,22 @@
+@use '../abstracts'as abs;
+@use '../utilities/' as utl;
+
+.header {
+  @include utl.straight-angled-border;
+  padding: 2.1875rem 1rem;
+  text-align: center;
+  font-family: abs.$font-heading;
+  background-color: abs.$color-dark-bace-70;
+
+  &__main-heading {
+    font-size: 2.625rem;
+    letter-spacing: .1rem;
+    font-weight: abs.$fw-regular;
+    color: abs.$color-font-secondary;
+    text-shadow:
+      1px 1px 0 abs.$color-font-primary,
+      -1px 1px 0 abs.$color-font-primary,
+      1px -1px 0 abs.$color-font-primary,
+      -1px -1px 0 abs.$color-font-primary;
+  }
+}

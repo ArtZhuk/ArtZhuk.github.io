@@ -1,0 +1,48 @@
+@use '../abstracts'as abs;
+@use '../utilities/' as utl;
+
+.main__checkboxes {
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 0.3125rem;
+
+  &-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .checkbox {
+    display: flex;
+  }
+  .checkbox__label {
+    font-weight: abs.$fw-semi;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  @include utl.media-md {
+    flex-direction: row;
+    justify-self: end;
+    gap: 5.5rem;
+
+    &-block {
+      gap: 1.875rem;
+    }
+
+    &-letters {
+      flex: 1 0;
+      flex-basis: 17.375rem;
+    }
+  
+    &-symbols {
+      flex: 1 0;
+      flex-basis: 11.875rem;
+    }
+
+    .checkbox:last-child {
+      padding-left: 2rem;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use '../abstracts/' as abs;
+@use '../utilities/' as utl;
+
+.copy-tag {
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  top: 100%;
+  display: grid;
+  place-content: center;
+  width: 6.5rem;
+  height: 2.25rem;
+  @include utl.straight-angled-border;
+  color: abs.$color-font-primary;
+  background-color: abs.$color-dark-bace;
+}

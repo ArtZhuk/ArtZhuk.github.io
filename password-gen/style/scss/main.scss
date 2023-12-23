@@ -1,0 +1,37 @@
+@use 'abstracts' as abs;
+@use 'utilities' as utl;
+@forward 'components';
+
+body {
+  display: grid;
+  grid-template-rows: min-content min-content auto;
+  grid-template-columns: minmax(26.25rem, 54.875rem);  
+  row-gap: 2.75rem;
+  justify-content: center;
+  min-height: 100vh;
+  // height: 100vh;
+  padding-top: 1.125rem;
+  background-color: abs.$color-dark-bace;
+  background-repeat: no-repeat;
+  background-image: 
+  linear-gradient(135deg, transparent, transparent 374px, abs.$color-light-bace 374px, abs.$color-light-bace 604px, transparent 604px),
+  conic-gradient(from -18deg at 892px 256px, abs.$color-light-bace, abs.$color-light-bace 43deg, transparent 43deg),
+  linear-gradient(180deg, transparent, transparent 950px, abs.$color-light-bace 950px),
+  // Yellow triangle at top right corner
+  conic-gradient(from 45deg at 1310px 0, abs.$color-light-bace, abs.$color-light-bace 59deg, transparent 59deg),
+  // Big black triangle on the right
+  conic-gradient(from 135deg at 2200px 250px, abs.$color-dark-bace, abs.$color-dark-bace 93deg, transparent 93deg),
+  linear-gradient(138deg, transparent, transparent 1450px, abs.$color-light-bace 1450px),
+  // Black triangle
+  conic-gradient(from 100deg at 1040px 555px, abs.$color-dark-bace, abs.$color-dark-bace 60deg, transparent 60deg),
+  // Yellow triangle
+  conic-gradient(from 100deg at 936px 481px, abs.$color-light-bace, abs.$color-light-bace 60deg, transparent 60deg);
+  background-size: cover, cover, cover, cover, cover, cover;
+  background-size: cover;
+  background-position: 50% 0;
+
+  @include utl.media-lg {
+    row-gap: 10.375rem;
+    padding-top: 10.125rem;
+  }
+}

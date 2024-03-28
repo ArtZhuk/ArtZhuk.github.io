@@ -1,0 +1,11 @@
+-- General discription
+A shopping list app provides adding, removing, checking and searching stuff through the list.
+The app consists of a search filed, a stuff list (composed of a checkbox(custom?), a good name and a remove button) and an add item button
+
+-- How it works
+Once loaded, the app shows a list of grocery to buy, if any are there in a local browser storage. 
+
+Typing in the search filed filters the items in the list by its name.
+
+Pressing the add item button opens a new block(form?) above the app. It's composed of a text input and a submit button. Pressing the button while a text is the input adds the new item to the shopping list and clears the input. Another pressing closes the block.
+

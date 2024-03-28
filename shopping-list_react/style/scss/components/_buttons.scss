@@ -1,0 +1,14 @@
+.btn {
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  &--small {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+  
+  &--large {
+    width: 4rem;
+    height: 4rem;
+  }
+}

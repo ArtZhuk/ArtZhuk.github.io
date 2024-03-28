@@ -1,0 +1,17 @@
+@use 'abstracts' as abs;
+@use 'utilities' as utl;
+@forward 'components';
+
+* {
+  color: abs.$color-text;
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 1.125rem;
+  height: 100dvh;
+  overflow-y: hidden;
+
+  min-width: 22.5em;
+  max-width: 26.875em;
+}

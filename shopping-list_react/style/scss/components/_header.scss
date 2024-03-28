@@ -1,0 +1,12 @@
+@use '../abstracts/' as abs;
+
+.header {
+  padding-top: 1rem;
+  text-align: center;
+
+  &__main-heading {
+    font-size: abs.$fs-heading;
+    font-family: abs.$font-accent;
+    letter-spacing: abs.$ls-1;
+  }
+}

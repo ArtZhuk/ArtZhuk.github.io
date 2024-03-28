@@ -1,0 +1,21 @@
+@use '../abstracts' as abs;
+
+.search {
+  padding-block: 1.375rem;
+  
+  &__input-field {
+    width: 100%;
+    padding: .375rem .5rem .125rem .5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: abs.$color-text;
+    font-size: abs.$fs-small;
+    font-family: abs.$font-primary;
+    color: abs.$color-light;
+    letter-spacing: abs.$ls-2;
+
+    &::placeholder {
+      color: inherit;
+    }
+  }
+}

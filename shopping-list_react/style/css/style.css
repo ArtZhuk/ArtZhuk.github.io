@@ -65,10 +65,10 @@ button:focus {
   background-repeat: no-repeat;
 }
 .list__checkmark--unchecked {
-  background-image: url(../../../images/check.svg);
+  background-image: url(https://raw.githubusercontent.com/ArtZhuk/ArtZhuk.github.io/28050e047e07b6eac6dff538e37ef26389985189/shopping-list_react/images/check.svg);
 }
 .list__checkmark--checked {
-  background-image: url(../../../images/checkFull.svg);
+  background-image: url(https://raw.githubusercontent.com/ArtZhuk/ArtZhuk.github.io/28050e047e07b6eac6dff538e37ef26389985189/shopping-list_react/images/checkFull.svg);
 }
 
 .header {

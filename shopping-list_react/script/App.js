@@ -40,7 +40,9 @@ class App extends React.Component {
     const list = [...this.state.list];
     list.push({name: item, checked: false});
     this.setState({list: list});
-    const sourceList = [...JSON.parse(localStorage.getItem("list"))];
+    const sourceList = localStorage.getItem("list")
+    ? [...JSON.parse(localStorage.getItem("list"))]
+    : [];
     sourceList.push({name: item, checked: false});
     localStorage.setItem("list", JSON.stringify(sourceList));
   };
